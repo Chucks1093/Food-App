@@ -1,0 +1,570 @@
+.landing{
+     background-color: #00302d;
+}
+
+.landing-header{
+     height: calc(10vh + 1rem);
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 1.9rem;
+     padding-left: 5rem;
+     color: whitesmoke;
+
+
+}
+.landing-header > div {
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+
+.links{
+     width: 30%;
+}
+
+.landing-logo{
+     height: 3rem;
+     width: 3rem;
+     border-radius: 50%;
+
+     
+}
+
+.brand-name{
+     font-size: 2.1rem;
+     font-weight: bolder;
+     margin-left: .6rem;
+     color: aliceblue;
+}
+
+.links {
+     font-size: 1.3rem;
+     font-weight: 500;
+}
+.links p {
+     width: 10rem;
+     height: 3rem;
+     display: grid;
+     place-items: center;
+     border-radius: .3rem;
+     font-weight: bold;
+     color: #f5c994;
+     cursor: pointer;
+     
+}
+
+.links p:hover {
+     color: #e2b885;
+}
+.links > p:last-child{
+     background-color: #e2b885;
+     color: #00302d;
+     box-shadow: 0px 5px 100px 10px rgb(22, 22, 22);
+}
+
+/*======== Hero Section ========*/
+.hero {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 80vh;
+     padding: 0 2.4rem 0 5rem;
+}
+.btn-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+
+.hero-img {
+     height: 42.5rem;
+     width: 43rem;
+     object-fit: cover;
+     object-position: 40% bottom;
+     border-radius: 50%;
+     border: 8px solid rgb(187, 129, 95);
+     box-shadow: 0px 70px 100px rgba(19, 17, 17, 0.404);
+
+}
+
+.hero-img-1{
+     height: 19rem;
+     width: 19rem;
+     box-sizing: content-box;
+     object-position: 30% 50%;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 10px solid rgb(187, 129, 95);
+     box-shadow: 0px 70px 100px rgba(19, 17, 17, 0.404);
+}
+
+.hero-img-container {
+     position: relative;
+     margin-top: 8rem;
+     margin-right: 3rem;
+     /* background-color: blue; */
+}
+
+.hero-loader {
+     position: absolute;
+     background-color: rgb(182, 100, 114);
+     width: 100%;
+     height: 100%;
+     opacity: 1;
+     border-radius: 50%;
+     display: grid;
+     place-items: center;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     transition: 2s opacity linear;
+
+}
+
+.hero .hero-img-1 {
+     display: none;
+}
+
+
+.hero h1 {
+     font-size: 5rem;
+     color: aliceblue;
+     font-weight: 500;
+}
+
+.hero h1 > span {
+     color: #f5c994;
+}
+.hero > div {
+     position: relative;
+     bottom: 5%;
+}
+
+.hero .apple{
+     font-size: 3rem;
+     color: aliceblue;
+}
+
+.hero .ad-word {
+     font-size: 1.5rem;
+     margin-top: 1.9rem;
+     margin-bottom: 4rem;
+     color: #e2c39c;
+
+}
+
+.btn-container > div >div > p:last-child {
+     font-size: 1.2rem;
+     font-weight: 500;
+
+}
+
+.btn-container > div >div > p:first-child {
+     font-size: .8rem;
+     font-weight: 500;
+
+}
+
+
+.btn-container {
+     margin-top: 3rem;
+}
+
+.btn-container > div > div {
+     margin-left: 1rem;
+}
+
+.btn-container > div:last-child {
+     margin-right: auto;
+     margin-left: 4rem;
+}
+
+
+.btn-container > div {
+     /* width: 8rem; */
+     height: 3rem;
+     border-radius: .5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgb(3, 3, 3);
+     color: aliceblue;
+     border: 1px solid aliceblue;
+     box-sizing: content-box;
+     padding: .8rem;
+}
+
+.btn-container > div > img {
+     height: 100%;
+}
+
+/*=========== Main Section ===========*/
+
+.main {
+     text-align: center;
+     margin-top: 2rem;
+}
+.main h1 {
+     font-size: 2.9rem;
+     color: aliceblue;
+     margin-bottom: 1.5rem;
+}
+
+.main > p {
+     color: #e2c39c;
+     line-height: 2.2rem;
+     font-size: 1.3rem;
+}
+.main .card-container{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin-top: 5.6rem;
+}
+
+.main .card {
+     width: 27%;
+     
+
+}
+
+.main .food-img {
+     width: 23rem;
+     height: 23rem;
+     object-fit: cover;
+     margin: 0 auto;
+     border-radius: 50%;
+     box-shadow: 0 0 100px rgba(0, 0, 0, 0.377);
+
+}
+
+.img-container{
+     position: relative;
+     /* width: fit-content; */
+     /* background-color: blue; */
+     margin: 0 auto;
+}
+
+.loader {
+     position: absolute;
+     background-color: rgb(182, 100, 114);
+     width: 23rem;
+     height: 23rem;
+     opacity: 1;
+     border-radius: 50%;
+     display: grid;
+     place-items: center;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     transition: 2s opacity linear;
+
+}
+
+.card h2 {
+     font-size: 2rem;
+     font-weight: bold;
+     color: rgb(253, 199, 138);
+     margin-top: 1rem;
+     letter-spacing: 2px;
+}
+
+.card > p {
+     font-size: 1.2rem;
+     margin-top: 1rem;
+     color: rgb(218, 206, 206);
+}
+
+/*=========== Form Section ===========*/
+
+.form {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 7rem;
+     padding: 0 5rem;
+     margin-bottom: 7rem;
+}
+
+.form .form-content > h2 {
+     font-size: 2.7rem;
+     color: rgb(253, 199, 138);
+     font-weight: bold;
+}
+
+.form .form-content > p {
+     color: aliceblue;
+     font-size: 1.2rem;
+     margin-top: 2.4rem;
+}
+
+.form-ori  {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+}
+
+.form-ori input {
+     width: 25rem;
+     height: 3.4rem;
+     border-radius: .4rem;
+     text-indent: 1rem;
+     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
+
+     font-size: 1.2rem;
+     border: none;
+}
+
+.form-ori button {
+     width: 13rem;
+     height: 3.4rem;
+     border-radius: .4rem;
+     font-size: 1.2rem;
+     margin-left: 1rem;
+     color: #00302d;
+     background-color: #e2b885;
+     cursor: pointer;
+     font-weight: bold;
+     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
+     border: none;
+
+}
+/*=========== Footer Section ===========*/
+
+.footer {
+     margin-top: 4rem;
+     background-color: #0b0e17;
+     padding: 4rem 5rem;
+}
+
+.footer .company-info {
+     display: flex;
+     justify-content: space-between;
+     align-items:flex-start;
+     color: aliceblue;
+     margin-top: 3rem;
+}
+
+.footer .company-info h3 {
+     font-weight: bold;
+     font-size: 1.4rem;
+     margin-bottom: 1.5rem;
+}
+
+.footer .company-info .column p {
+     margin-bottom: 1rem;
+     font-size: 1.1rem;
+}
+.install-container > div {
+     height: 3rem;
+     padding: 1rem;
+     border-radius: .5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgb(3, 3, 3);
+     color: aliceblue;
+     border: 1px solid aliceblue;
+     box-sizing: content-box;
+     margin-top: 1.5rem;
+}
+
+.footer hr {
+     width: 100%;
+     border-radius: .8rem;
+     border: 1px solid rgb(51, 50, 50);
+     margin-top: 2rem;
+}
+
+.install-container .apple {
+     font-size: 3rem;
+}
+
+.install-container > div > img {
+     height: 100%;
+     margin-right: .1rem;
+}
+
+.install-container > div > div > p:first-child {
+     font-size: .8rem;
+     font-weight: 500;
+}
+.install-container  .app-name {
+     font-size: 1.1rem;
+     font-weight: bold;
+}
+
+.company-sign {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: aliceblue;
+     margin-top: 1.5rem;
+}
+
+.social-icons  i{
+     font-size: 1.7rem;
+     box-sizing: content-box;
+     padding: .4rem;
+     border-radius: 50%;
+     background-color: #1f222c;
+     margin-left: 2rem;
+     display: inline-block;
+}
+
+
+
+@media screen and (max-width : 800px) {
+     .landing-header {
+          height: 13vh;
+          padding: 0 1rem;
+          overflow: hidden;
+          /* background-color: red; */
+     }
+
+     .links {
+          width: 70%;
+          font-size: 1.2rem;
+          /* background-color: red; */
+     }
+
+     .hero {
+          height: 90vh;
+          text-align: center;
+          margin-top: 1rem;
+     }
+     .hero .ad-word, .main >p {
+          font-size: 1rem;
+     }
+
+     .brand-name {
+          font-size: 1.5rem;
+     }
+     .hero .hero-img-1 {
+          display: block;
+          margin: 0 auto;
+          
+     }
+     
+     .hero .hero-img-container {
+          display: none;
+     }
+     .hero h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+     }
+     .btn-container > div > div {
+          margin-left: 1rem;
+     }
+     
+     .btn-container > div:last-child {
+          margin-right: 0;
+          margin-left: 0;
+     }
+     .btn-container > div {
+          height: 2rem;
+     }
+
+     .btn-container .apple {
+          font-size: 2rem;
+     }
+
+     .main h1 {
+          font-size: 2rem;
+     }
+     .main .card-container {
+          flex-direction: column;
+          justify-content:space-between;
+          align-items: center;
+     }
+     .main .card {
+          width: 80%;
+          margin-bottom: 3rem;
+     }
+
+     .main .food-img {
+          margin:  0 auto;
+          width: 18.7rem;
+          height: 18.7rem;
+     }
+
+     .loader{
+          width: 18.7rem;
+          height: 18.7rem;
+     }
+     .form {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          text-align: center;
+          margin-top: 2rem;
+          padding: 0 3rem;
+     }
+     .form .form-content {
+          margin-bottom: 2rem;
+     }
+     .form .form-content > p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-top: 1rem;
+     }
+     .form-ori {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          width: 100vw;
+     }
+     .form-ori input {
+          margin-bottom: 2rem;
+          width: 80%;
+     }
+
+     .form-ori buttton {
+          margin-left: 0rem;
+     }
+
+     .form .form-content > h2 {
+          font-size: 2.1rem;
+     }
+
+     .footer {
+          padding: 4rem 2rem;
+     }
+
+     .footer .company-info {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 17rem 17rem;
+          /* background-color: red; */
+     }
+     
+     
+     .install-container > div {
+          padding: 1rem .3rem;
+          height: 4rem;
+          width: 12rem;
+          box-sizing: border-box;
+          justify-content: space-around;
+     }
+     .install-container {
+          height: 3rem;
+     }
+     .install-container .apple {
+          font-size: 2rem;
+     }
+     .install-container > div > img {
+          margin-right: 1rem;
+     }
+
+     .company-sign {
+          padding: 0 1rem;
+     }
+
+}
+

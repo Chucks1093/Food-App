@@ -1,0 +1,107 @@
+.cart-modal {
+     width: 37vw;
+     background-color: rgb(247, 250, 253);
+     height: 100vh;
+     position: fixed;
+     right: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: translateX(100%);
+     z-index: 2;
+     transition: .3s transform ease-in;
+}
+.showCart {
+     transform: translateX(0%);
+}
+
+.cart-modal-details {
+     position: relative;
+     width: 80%;
+     /* margin-bottom: 10rem; */
+}
+
+.cart-modal .cart-modal-img {
+     width: 19rem;
+     object-fit: cover;
+     height: 19rem;
+     border-radius: 50%;
+     margin:  0 auto;
+     box-shadow: 0 0 100px rgba(0, 0, 0, 0.171);
+}
+
+.cart-modal-details h3 {
+     font-size: 1.7rem;
+     font-weight: 700;
+     color: rgb(31, 100, 48);
+     margin-top: 2rem;
+     text-align: center;
+}
+
+.cart-modal-details > p {
+     font-size: 1.2rem;
+     font-weight: 500;
+     color: rgb(104, 104, 104);
+     line-height: 2.2rem;
+     text-align: center;
+     margin-top: 2rem;
+}
+
+.cart-modal-info {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 3rem;
+     color: rgb(31, 100, 48);
+     font-size: 1.45rem;
+     font-weight: bold;
+}
+
+.cart-modal-btns {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 3rem;
+}
+
+.cart-modal-btns button {
+     height: 4rem;
+     width: 12rem;
+     font-size: 1.2rem;
+     font-weight: 600;
+     display: grid;
+     place-items: center;
+     background-color: rgb(31, 100, 48);
+     color: beige;
+     border: none;
+     cursor: pointer;
+}
+
+.quantity-btns {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 33%;
+     /* border: 1px solid red; */
+
+}
+.quantity-btns  p{
+     font-size: 3rem;
+     font-weight: bold;
+     color: rgb(31, 100, 48);
+
+}
+
+.ri-add-fill , .ri-subtract-fill {
+     font-size: 2.3rem;
+     font-weight: bolder;
+     color: rgb(31, 100, 48);
+     height: 4rem;
+     width: 3.3rem;
+     background-color: #e2b885;
+     display: grid;
+     place-items: center;
+     cursor: pointer;
+
+}
+

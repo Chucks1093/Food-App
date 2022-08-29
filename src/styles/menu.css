@@ -1,0 +1,88 @@
+.menu {
+     width: 19rem;
+     border-radius: .7rem;
+     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.514);
+     padding-top: 1rem;
+     border: none;
+     margin-bottom: 2rem;
+     /* background-color: antiquewhite; */
+}
+
+.menu-img-container {
+     position: relative;
+}
+
+
+.menu-img {
+     width: 10rem;
+     height: 10rem;
+     border-radius: 50%;
+     object-fit: cover;
+     margin: 0 auto;
+     object-position: center 70%;
+
+}
+
+.menu-img-container .menu-image-loader {
+     transition: 4s opacity linear;
+     background-color: rgb(182, 100, 114);
+     position: absolute;
+     width: 10rem;
+     height: 10.3rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     opacity: 1;
+     left: 50%;
+     transform: translateX(-50%);
+
+}
+
+.menu-name {
+     text-align: center;
+     margin-top: 1.6rem;
+     color: #01645e;
+}
+
+.menu .menu-info{
+     font-size: 1.1rem;
+     font-weight: 400;
+     text-align: center;
+     padding: 0 1rem;
+     margin-top: 1.3rem;
+     color: #8d8a8a;
+
+}
+
+
+.menu div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 1rem;
+     margin-top: 1.5rem;
+     font-size: 1.1rem;
+     font-weight: bold;
+     margin-bottom: 1.8rem;
+}
+
+.menu .menu-cart-btn {
+     background-color: transparent;
+     border: none;
+     font-size: 1.05rem;
+     font-weight: 500;
+     background-color: #02554f;
+     padding: .6rem;
+     color:rgb(255, 255, 255);
+     cursor: pointer;
+     border-radius: .5rem;
+}
+
+.menu-cart-btn:hover {
+     background-color: #01756e;
+}
+
+.menu-price {
+     color: #01645e;
+}
