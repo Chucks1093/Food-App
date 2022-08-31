@@ -16,7 +16,7 @@ function Menu(props) {
                <p className='menu-info'>The in-house pasta and chicken by chef moose.</p>
                <div>
                     <p className='menu-price'>{`N ${props.price}`}</p>
-                    <button className='menu-cart-btn'>Add <i className="ri-user-line"></i></button>
+                    <button className='menu-cart-btn'>Add <i className="ri-shopping-cart-line"></i></button>
                </div>
           </div>
      )
