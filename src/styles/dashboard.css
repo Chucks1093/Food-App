@@ -2,7 +2,7 @@
      display: grid;
      grid-template-columns: 30% 70%;
      /* grid-template-rows: 100vh; */
-     background-color: indianred;
+     /* background-color: indianred; */
      height: 100vh;
      position: relative;
 }

@@ -1,7 +1,8 @@
 .products {
-     background-color: rgb(255, 255, 255);
+     background-color: beige;
      overflow-y: scroll;
      position: relative;
+     overflow-x: hidden;
 }
 
 .products header {
@@ -20,13 +21,13 @@
      object-fit: cover;
      object-position: top;
      filter: grayscale(.3);
-     z-index: -1;
+     z-index: 0;
 }
 
 .products .greetings {
      font-size: 2rem;
      font-weight: 700;
-     color: #05423c;
+     color: #08756a;
 }
 
 .products .greetings span {
@@ -38,6 +39,6 @@
 .menu-container {
      display: flex;
      justify-content: space-between;
-     padding: 2rem 2rem 0;
+     padding: 2rem 5rem 0;
      flex-wrap: wrap;
 }

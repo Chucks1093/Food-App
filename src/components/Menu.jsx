@@ -3,6 +3,7 @@ import '../styles/menu.css';
 import fadeOut from './fadeOut';
 
 function Menu(props) {
+     
      return(
           <div onClick={props.handleClick} className='menu'>
                <div className='menu-img-container'>
@@ -15,7 +16,7 @@ function Menu(props) {
                <p className='menu-info'>The in-house pasta and chicken by chef moose.</p>
                <div>
                     <p className='menu-price'>{`N ${props.price}`}</p>
-                    <button className='menu-cart-btn'>Add to the cart</button>
+                    <button className='menu-cart-btn'>Add <i className="ri-user-line"></i></button>
                </div>
           </div>
      )

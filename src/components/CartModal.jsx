@@ -3,13 +3,14 @@ import {useState} from "react";
 
 function CartModal(props) {
      const [quantity, setQuantity] = useState(0);
+     
 
      const increaseQuantity = () => setQuantity((value)=>value+1);
 
      const decreaseQuantity = () => setQuantity((value)=>value <= 0? 0 : value - 1);
      
      return (
-          <div className={`cart-modal ${props.modalState? "showCart" : " " }`}>
+          <div  className={`cart-modal ${props.activeModal.state && props.activeModal.element== "menu"  ? "showCart" : "" }`}>
                <div className='cart-modal-details'>
                     <img className='cart-modal-img' src={props.image} alt="" />
                     <h3>Baby Pepper</h3>
@@ -25,7 +26,7 @@ function CartModal(props) {
                               <p>{quantity}</p>
                               <i onClick={decreaseQuantity} className="ri-subtract-fill"></i>
                          </div>
-                         <button>Add to Cart</button>
+                         <button className='btn' onClick={(e)=>props.handleClick(e)}>Add to Cart</button>
                     </div>
                </div>
           </div>

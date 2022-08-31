@@ -1,11 +1,12 @@
 .menu {
      width: 19rem;
      border-radius: .7rem;
-     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.514);
+     box-shadow: 0 0px 10px rgba(36, 35, 35, 0.062);
      padding-top: 1rem;
+     padding: 0 .7rem 0;
      border: none;
-     margin-bottom: 2rem;
-     /* background-color: antiquewhite; */
+     margin-bottom: 4rem;
+     background-color: rgb(252, 247, 249);
 }
 
 .menu-img-container {

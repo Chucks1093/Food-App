@@ -1,11 +1,22 @@
 
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import '../styles/login.css'
 import '../styles/reg.css'
 import fadeOut from '../components/fadeOut';
 
 function Register() {
      let navigate = useNavigate();
+     const [type , setType] = useState({visible: false, input:"password"});
+     function tooglePassword() {
+          setType((value)=>{
+               return {
+                    ...value,
+                    visible : !value.visible,
+                    input : !value.visible ? "text" : "password"
+               }
+          })
+     }
      return (
           <div className="login-page">
                <div className='login'>
@@ -22,8 +33,8 @@ function Register() {
                               <input type="text" placeholder='Your First Name' />
                               <input type="email" placeholder='Your Email address' />
                               <div className='login-password'>
-                                   <input type="password" placeholder='Your Password'/>
-                                   <button type='submit' className='show-btn'>Show</button>
+                                   <input type={type.input} placeholder='Your Password'/>
+                                   <button onClick={tooglePassword} className='show-btn'>Show</button>
                               </div>
                               <button onClick={()=> navigate("/login")} className='login-btn' type="submit">SIGN UP</button>
                               <div className='reg-options'>

@@ -1,0 +1,110 @@
+.orders {
+     width: 53vw;
+     height: 100vh;
+     background-color: white;
+     position: fixed;
+     right: 0;
+     padding-top: 3rem;
+     padding-left: 3rem;
+     z-index: 2;
+     overflow-y: scroll;
+     transform: translateX(100%);
+     transition: .3s transform ease-in;
+     
+}
+
+.show-order{
+     transform: translateX(0%);
+}
+
+
+.orders h1 {
+     color: #298882;
+     font-weight: bold;
+     margin-bottom: 4rem;
+     font-size: 2.5rem;
+}
+.cart-table {
+     display: grid;
+     width: 100%;
+     grid-template-columns: 40% repeat(3,20%);
+     color: rgb(167, 167, 167);
+     font-size: 1.3rem;
+     font-weight: 550;
+     margin-top: .8rem;
+     margin-bottom: 4rem;
+}
+
+.orders .item {
+     display: grid;
+     grid-template-columns: 40% repeat(3,20%);
+     margin: 2rem 0 2rem;
+}
+
+.item {
+     display: flex;
+     align-items: center;
+}
+
+.item .item-status-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.orders .item img {
+     width: 8rem;
+     height: 8rem;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-right: 1.4rem;
+}
+.item-status-container div {
+     margin-right: auto;
+}
+
+.item-status-container .item-name {
+     color: #01645e;
+     font-weight: bold;
+     font-size: 1.5rem;
+
+}
+
+.item-status-container button {
+     background-color: transparent;
+     color: rgb(180, 105, 105);
+     font-weight: 600;
+     border: none;
+     font-size: 1.2rem;
+     margin-top: .6rem;
+     cursor: pointer;
+}
+
+.item-status-container button:hover {
+     color: rgb(122, 32, 32);
+}
+
+.item .item-quantity {
+     color: #01645e;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+
+.item .item-price {
+     color: #01645e;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+
+.item .item-status {
+     font-size: 1.2rem;
+     font-weight: 500;
+}
+
+.progress {
+     color: rgb(238, 56, 56);
+}
+
+.done {
+     color: #01645e;
+}

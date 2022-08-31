@@ -1,5 +1,5 @@
 .nav-bar {
-     background-color: whitesmoke;
+     background-color: rgb(255, 253, 251);
 }
 
 .nav-top {
@@ -23,30 +23,39 @@
      font-size: 3.5rem;
      font-weight: 500;
      margin-left: 1rem;
-     color: #00302d;
+     color: #08756a;
 }
 
 .nav-option{
      display: flex;
+     border-radius: .4rem;
      /* justify-content: center; */
      align-items: center;
      margin-left: 2.5rem;
      padding-left: 1rem;
-     height: 3.5rem;
-     color: gray;
+     height: 3.7rem;
      margin-bottom: 3rem;
      position: relative;
      width: 85%;
-     /* background-color: gray; */
 }
 
+.inactive {
+     color: rgb(172, 172, 172);
+}
+
+.active {
+     background-color: rgb(226, 226, 222);
+     color: rgb(136, 128, 128); 
+}
 .nav-option i {
      font-size: 2.5rem;
+     cursor: pointer;
      margin-right: 1rem;
 }
 
 .nav-option h3 {
      font-size: 1.4rem;
+     cursor: pointer;
 }
 
 .nav-option span {
@@ -62,11 +71,11 @@
 }
 
 .nav-option .order-no {
-     background-color: rgb(114, 151, 57);
-     color: rgb(54, 73, 26);
+     background-color: beige;
+     color: rgb(104, 104, 104);
 }
 
 .nav-option .cart-no {
-     background-color: coral;
-     color: rgb(150, 62, 31);
+     background-color: beige;
+     color: rgb(104, 104, 104);
 }

@@ -77,6 +77,9 @@
      cursor: pointer;
 }
 
+.cart-modal-btns button:hover {
+     background-color: rgb(62, 146, 83);
+}
 .quantity-btns {
      display: flex;
      justify-content: space-between;

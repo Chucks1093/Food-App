@@ -1,9 +1,20 @@
 import { useNavigate } from 'react-router-dom';
 import '../styles/login.css'
 import fadeOut from '../components/fadeOut';
+import { useState } from 'react';
 
 function Login() {
      const navigate = useNavigate();
+     const [type , setType] = useState({visible: false, input:"password"});
+     function tooglePassword() {
+          setType((value)=>{
+               return {
+                    ...value,
+                    visible : !value.visible,
+                    input : !value.visible ? "text" : "password"
+               }
+          })
+     }
      return (
           <div className="login-page">
                <div className='login'>
@@ -19,8 +30,8 @@ function Login() {
                               <h1>Welcome Back !</h1>
                               <input type="text" placeholder='Your Email address' />
                               <div className='login-password'>
-                                   <input type="text" placeholder='Your Password'/>
-                                   <button className='show-btn'>Show</button>
+                                   <input type={type.input} placeholder='Your Password'/>
+                                   <button onClick={tooglePassword} className='show-btn'>Show</button>
                               </div>
                               <button onClick={()=> navigate("/dashboard")} className='login-btn' type="submit">LOGIN</button>
                               <div className='options'>
