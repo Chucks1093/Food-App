@@ -1,5 +1,55 @@
-.profile {
-     width: 30vw;
-     height: 70vh;
-     background-color: turquoise;
+.profile-2 {
+     width: 37vw;
+     background-color: rgb(247, 250, 253);
+     height: 100vh;
+     position: fixed;
+     right: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: translateX(100%);
+     z-index: 2;
+     transition: .3s transform ease-in;
+}
+
+.show-profile {
+     transform: translateX(0%);
+}
+.profile-2 * {
+     /* border: 1px solid red; */
+}
+
+.profile-2 .cart-modal-img {
+     width: 19rem;
+     object-fit: cover;
+     object-position: top;
+     height: 19rem;
+     border-radius: 50%;
+     margin:  0 auto;
+     box-shadow: 0 10px 20px rgba(36, 35, 35, 0.247);
+     /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.171); */
+}
+
+
+.profile-skill-img-container {
+     display: grid;
+     place-items: center;
+}
+
+.cart-modal-info .profile-skill-img-container {
+     width: 6rem;
+     height: 6rem;
+     box-shadow: 0 10px 20px rgba(68, 66, 66, 0.151);
+     padding: .5rem;
+     border-radius: 50%;
+}
+
+.skill-img {
+     width: 80%;
+     object-fit: contain;
+}
+
+.js-skill-img {
+     width: 60%;
+     object-fit: cover;
 }

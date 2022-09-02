@@ -28,10 +28,10 @@ function Login() {
                     <div className='login-form-container'>
                          <form onSubmit={(e)=>e.preventDefault()} className='login-form'>
                               <h1>Welcome Back !</h1>
-                              <input type="text" placeholder='Your Email address' />
+                              <input type="email" required placeholder='Your Email address' />
                               <div className='login-password'>
                                    <input type={type.input} placeholder='Your Password'/>
-                                   <button onClick={tooglePassword} className='show-btn'>Show</button>
+                                   <button onClick={tooglePassword} className={`show-btn ${type.visible? "ri-eye-line" : "ri-eye-off-line"}`}></button>
                               </div>
                               <button onClick={()=> navigate("/dashboard")} className='login-btn' type="submit">LOGIN</button>
                               <div className='options'>

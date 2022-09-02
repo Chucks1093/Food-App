@@ -34,7 +34,7 @@ function Register() {
                               <input type="email" placeholder='Your Email address' />
                               <div className='login-password'>
                                    <input type={type.input} placeholder='Your Password'/>
-                                   <button onClick={tooglePassword} className='show-btn'>Show</button>
+                                   <button onClick={tooglePassword} className={`show-btn ${type.visible? "ri-eye-line" : "ri-eye-close-line"}`}></button>
                               </div>
                               <button onClick={()=> navigate("/login")} className='login-btn' type="submit">SIGN UP</button>
                               <div className='reg-options'>

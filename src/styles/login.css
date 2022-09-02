@@ -107,17 +107,19 @@
      top: 50%;
      right: 0%;
      width: 20%;
-     font-weight: 700;
+     font-size: 1.5rem;
      height: 100%;
      cursor: pointer;
-     color: #00302d;
+     color: rgb(179, 179, 179);
      background-color: transparent;
      border: none;
+     transition: .5s all ease;
      transform: translateY(-50%);
 }
 
 .show-btn:hover {
-     color: #dd5533;
+     color: rgb(148, 148, 148);
+
 }
 .options {
      display: flex;

@@ -1,9 +1,34 @@
 import '../styles/cart-modal.css';
-import {useState} from "react";
+import { useState} from "react";
+import getLocalStorage from './getLocalStorage';
 
 function CartModal(props) {
      const [quantity, setQuantity] = useState(0);
      
+     const addToLocalStorage = (e) => {
+          props.handleClick(e)  
+          const foodInfo = {
+               image: props.details.image,
+               name : props.details.name,
+               price : props.details.price,
+               amount : quantity,
+               id : props.details.id
+          }
+          let items = getLocalStorage();
+          items.push(foodInfo);
+          console.log(items)
+          localStorage.setItem("items", JSON.stringify(items))
+          setQuantity(0)
+     }
+
+     const alertUser=(e)=> {
+          const element = e.currentTarget.previousElementSibling.children[1];
+          console.log(element)
+          element.classList.add('wrong');
+          setTimeout(()=>{
+               element.classList.remove('wrong');
+          }, 1200)
+     }
 
      const increaseQuantity = () => setQuantity((value)=>value+1);
 
@@ -12,11 +37,11 @@ function CartModal(props) {
      return (
           <div  className={`cart-modal ${props.activeModal.state && props.activeModal.element== "menu"  ? "showCart" : "" }`}>
                <div className='cart-modal-details'>
-                    <img className='cart-modal-img' src={props.image} alt="" />
-                    <h3>Baby Pepper</h3>
+                    <img className='cart-modal-img' src={props.details.image} alt={props.details.image} />
+                    <h3>{props.details.name}</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae quos porro a fuga dicta deleniti dolore eveniet aperiam iusto aliquid repudiandae consequuntur cum sed, adipisci quia. Dicta, facilis quidem? Perspiciatis, deleniti non voluptatem fuga labore beatae ipsa velit. Possimus.</p>
                     <div className='cart-modal-info'>
-                         <p>NGN 2000.00</p>
+                         <p>NGN {props.details.price}</p>
                          <p>10 - 20 Mins</p>
                          <p>10 Pcs Avail</p>
                     </div>
@@ -26,7 +51,7 @@ function CartModal(props) {
                               <p>{quantity}</p>
                               <i onClick={decreaseQuantity} className="ri-subtract-fill"></i>
                          </div>
-                         <button className='btn' onClick={(e)=>props.handleClick(e)}>Add to Cart</button>
+                         <button className='btn' onClick={quantity ==0 ? alertUser : addToLocalStorage}>Add to Cart</button>
                     </div>
                </div>
           </div>

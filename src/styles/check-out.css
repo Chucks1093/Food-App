@@ -1,0 +1,141 @@
+.checkout-page {
+     width: 37vw;
+     background-color: white;
+     height: 100vh;
+     position: fixed;
+     right: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: translateX(100%);
+     z-index: 5;
+     transition: .3s transform ease-in;
+}
+.show-checkOut {
+     transform: translateX(0%);
+}
+.checkout-details {
+     width: 100%;
+     padding: 0 2rem;
+     position: absolute;
+     bottom: 15%;
+}
+
+.checkout-details h1 {
+     color: #298882;
+     font-weight: bold;
+     font-size: 2.5rem;
+     text-align: left;
+     width: 93%;
+     margin: 0 auto 1rem;
+}
+
+.checkout-page * {
+     /* border:  1px solid red; */
+}
+.checkout-form {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     width: 93%;
+     margin: 0 auto;
+}
+.checkout-form input {
+     width: 100%;
+     height: 3.9rem;
+     border-radius: .35rem;
+     margin-top: 3rem;
+     text-indent: calc(1rem + 1.1rem );
+     font-size: 1.1rem;
+     font-weight: 490;
+     display: block;
+     letter-spacing: .6px;
+     border: 2px solid rgba(128, 128, 128, 0.192);
+     color: rgb(184, 184, 184);
+}
+
+.checkout-form input::placeholder {
+     color: #cfcfcf;
+     font-weight: 450;
+     font-size: 1.05rem;
+}
+.checkout-form .date-input {
+     text-indent: calc(.15rem + 1.1rem );
+     padding-right: 1.4rem;
+}
+
+.action-btn-container {
+     width: 100%;
+     margin: 0 auto;
+     height: 7rem;
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-end;
+     position: relative;
+}
+
+.checkout-form .card-identity {
+     position: relative;
+     display: block;
+     width: 100%;
+}
+.card-sign {
+     position: absolute;
+     bottom: 0%;
+     right: 4%;
+     width: 6%;
+     object-fit: contain;
+     height: 3.9rem;
+     cursor: pointer;
+     background-color: transparent;
+}
+
+
+.pay-btn {
+     width: 100%;
+     height: 4rem;
+     bottom: 10%;
+     left: 0%;
+     background-color: #298882;
+     color: rgb(248, 245, 240);
+     font-weight: 500;
+     font-size: 1.3rem;
+     border-radius: .6rem;
+     cursor: pointer;
+     margin-right: auto;
+     position: relative;
+     border: 0;
+}
+
+.pay-btn:active {
+     background-color: #01756e;
+}
+
+.ri-checkbox-circle-fill {
+     color: #f3ede6;
+     font-weight: 300;
+     font-size: 2.5rem;
+     position: absolute;
+     right: 27%;
+     transform: translateY(50%);
+     bottom: 50%;
+     transition: 2.5s opacity linear;
+}
+
+.show-logo {
+     opacity: 1;
+}
+
+.hide-logo {
+     opacity: 0;
+}
+.checkout-loader {
+     position: absolute;
+     right: 25%;
+     bottom: 50%;
+     transform: translateY(50%);
+     width: 3.5rem;
+
+}
+
+

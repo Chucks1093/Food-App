@@ -1,0 +1,60 @@
+.item {
+     display: flex;
+     align-items: center;
+}
+
+.item .item-status-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.item-status-container div {
+     margin-right: auto;
+}
+
+.item-status-container .item-name {
+     color: #01645e;
+     font-weight: bold;
+     font-size: 1.5rem;
+
+}
+
+.item-status-container button {
+     background-color: transparent;
+     color: rgb(180, 105, 105);
+     font-weight: 700;
+     border: none;
+     font-size: 1.2rem;
+     margin-top: .6rem;
+     cursor: pointer;
+}
+
+.item-status-container button:active {
+     color: rgb(122, 32, 32);
+}
+
+.item .item-quantity {
+     color: #01645e;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+
+.item .item-price {
+     color: #01645e;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+
+.item .item-status {
+     font-size: 1.2rem;
+     font-weight: 500;
+}
+
+.progress {
+     color: rgb(238, 56, 56);
+}
+
+.done {
+     color: #01645e;
+}

@@ -23,13 +23,12 @@
      font-size: 3.5rem;
      font-weight: 500;
      margin-left: 1rem;
-     color: #08756a;
+     color: rgb(172, 172, 172);
 }
 
 .nav-option{
      display: flex;
      border-radius: .4rem;
-     /* justify-content: center; */
      align-items: center;
      margin-left: 2.5rem;
      padding-left: 1rem;
@@ -37,6 +36,7 @@
      margin-bottom: 3rem;
      position: relative;
      width: 85%;
+     transition: 1s all ease;
 }
 
 .inactive {
@@ -71,11 +71,11 @@
 }
 
 .nav-option .order-no {
-     background-color: beige;
+     background-color: rgb(248, 242, 242);
      color: rgb(104, 104, 104);
 }
 
 .nav-option .cart-no {
-     background-color: beige;
+     background-color: rgb(248, 242, 242);
      color: rgb(104, 104, 104);
 }

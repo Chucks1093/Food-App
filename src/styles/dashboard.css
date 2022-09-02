@@ -1,8 +1,6 @@
 .dashboard {
      display: grid;
      grid-template-columns: 30% 70%;
-     /* grid-template-rows: 100vh; */
-     /* background-color: indianred; */
      height: 100vh;
      position: relative;
 }
@@ -14,11 +12,29 @@
      height: 100vh;
      right: 0;
      background-color: rgba(164, 165, 163, 0.473);
+     transition: .5s opacity linear;
+}
+.show-modalOn {
      z-index: 1;
-     transition: 2s background linear;
+     opacity: 1;
 }
 
 .hide {
-     display: none;
-     background-color: rgba(164, 165, 163, 0);
+     opacity: 0;
+     z-index: -4;
 }
+
+.show-checkout-cover {
+     opacity: 1;
+     z-index: 4;
+}
+.checkout-cover {
+     width: 100vw;
+     height: 100vh;
+     right: 0;
+     /* display: none; */
+     background-color: rgba(164, 165, 163, 0.473);
+     transition: .5s opacity linear;
+     position: absolute;
+}
+

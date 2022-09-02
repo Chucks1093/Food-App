@@ -1,18 +1,49 @@
 import '../styles/cart.css';
 import '../styles/orders.css';
 import Item from '../components/Item';
-import menuItems from '../components/menuItems';
-import { useState } from 'react';
+import getLocalStorage from '../components/getLocalStorage';
+import { useState, useEffect } from 'react';
 
 function Cart(props) {
-     const [sum, setSum] = useState(0);
-     const getSum = (initial) => {
-          menuItems.forEach(item => {
-               console.log(item.price)
-               initial += item.price * 2;
+     const [cartItems, setCartItems] = useState(getLocalStorage);
+     const [totalItemsNo, setTotalItemsNo] = useState(0)
+
+     const deleteItem = (id) => {
+          let items = getLocalStorage();
+          items = items.filter(item=> {
+               if (item.id !== id) {
+                    return item;
+               }
           })
-          setSum(initial);
+          setCartItems(items);
+          setTotalItemsNo(()=>{
+               let initial = 0;
+               items.forEach((item) => {
+                    initial += (item.price * item.amount);
+               })
+               return initial;
+          })
+          localStorage.setItem("items", JSON.stringify(items));
      }
+     
+     useEffect(()=> {
+          setCartItems([]);
+          setTotalItemsNo(0);
+     }, [props.activeModal.element=="checkout-cover"? true : false]);
+
+
+     useEffect(()=>{
+          setCartItems(getLocalStorage)
+          setTotalItemsNo(()=>{
+               let initial = 0;
+               cartItems.forEach((item) => {
+                    initial += (item.price * item.amount);
+               })
+               return initial;
+          })
+     }, [props.activeModal.element == "btn" ? true : false])
+
+     
      return(
           <div className={`cart-page ${props.activeModal.state && props.activeModal.element=="cart"? "show-cart" : ""}`}>
                <h1>Your Cart</h1>
@@ -23,11 +54,25 @@ function Cart(props) {
                     <p>Sub-total</p>
                </div>
                <div className="contain-items">
-                    {menuItems.map((item)=>{
-                         return <Item price={item.price} amount={2} image="card-1" isOrder={true} />
+                    {cartItems.map((item, i)=>{
+                         return <Item 
+                                   key={i} 
+                                   handleClick={deleteItem} 
+                                   id={item.id} 
+                                   price={item.price} 
+                                   amount={item.amount} 
+                                   image={item.image} 
+                                   isOrder={true} 
+                              />
                     })}
                </div>
-               <p>{sum}</p>
+               <div className='total-section'>
+                    <p className='total-word'>Total : </p>
+                    <p className='total-value'>NGN {totalItemsNo}</p>
+               </div>
+               <button 
+                    onClick={(e)=>props.handleClick(e)} 
+                    className={`checkout-btn ${!totalItemsNo ? "hide-checkout-btn" : "" }`}>Checkout</button>
           </div>
      )
 }

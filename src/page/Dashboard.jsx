@@ -8,11 +8,12 @@ function Dashboard() {
      const setModalState = (e) => {
           console.log(isModalActive)
           const mode = e.currentTarget.classList[0];
+
           return setIsModalActive((value)=> {
                console.log(mode)
                return {
                     ...value,
-                    state : !value.state,
+                    state : value.element == "checkout-btn"? false : !value.state ,
                     element : mode
                }
           });
@@ -23,16 +24,18 @@ function Dashboard() {
                <Nav 
                     elementName={isModalActive}
                     handleState={(e)=>setModalState(e)}
-                    
                />
                <Products 
                     elementName={isModalActive}
                     handleModalState={(e)=>setModalState(e)} 
                />
-               <div onClick={setModalState} 
-                    className={`modalOn ${!isModalActive.state? "hide" : " "}`}>
+               <div 
+                    onClick={setModalState} 
+                    className={`modalOn ${!isModalActive.state ? "hide" : "show-modalOn"}`}>
                </div>
-               
+               <div 
+                    onClick={setModalState}
+                    className={`checkout-cover ${isModalActive.element == "checkout-btn" ? "show-checkout-cover" : "hide" }`}></div>     
           </div>
      )
 }
