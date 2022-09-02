@@ -39,6 +39,7 @@ function Orders(props) {
                                    price={item.price} 
                                    amount={item.amount} 
                                    image={item.image} 
+                                   isOrder={true}
                               />
                     })}
                </div>

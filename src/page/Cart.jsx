@@ -25,11 +25,6 @@ function Cart(props) {
           })
           localStorage.setItem("items", JSON.stringify(items));
      }
-     
-     useEffect(()=> {
-          setCartItems([]);
-          setTotalItemsNo(0);
-     }, [props.activeModal.element=="checkout-cover"? true : false]);
 
 
      useEffect(()=>{
@@ -41,7 +36,7 @@ function Cart(props) {
                })
                return initial;
           })
-     }, [props.activeModal.element == "btn" ? true : false])
+     }, [props.activeModal.element == "btn" || props.activeModal.element=="checkout-cover"? true : false])
 
      
      return(
@@ -62,7 +57,6 @@ function Cart(props) {
                                    price={item.price} 
                                    amount={item.amount} 
                                    image={item.image} 
-                                   isOrder={true} 
                               />
                     })}
                </div>

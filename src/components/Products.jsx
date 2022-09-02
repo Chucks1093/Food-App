@@ -11,7 +11,7 @@ import { useState } from 'react';
 function Products(props) {
      let [cardDetails, setCardDetails] = useState({image:"", price: "", name: "", id: 0});
 
-     const setImage =(e) => {
+     const changeModalDetails =(e) => {
           const itemImg = e.currentTarget.children[0].children[0].src;
           const itemId = new Date().getTime().toString();
           const itemPrice = e.currentTarget.children[3].children[0].textContent.slice(1);
@@ -55,7 +55,7 @@ function Products(props) {
                          return (
                               <Menu  
                                    key={i} 
-                                   handleClick={setImage} 
+                                   handleClick={changeModalDetails} 
                                    img={item.img} 
                                    price={item.price}
                               />

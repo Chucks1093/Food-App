@@ -3,17 +3,14 @@ import '../styles/item.css';
 
 
 function Item(props) {
-     let [itemStatus, setItemStatus] = useState("Cooking...");
-     if (props.isOrder) {
-          itemStatus = props.amount * props.price;
-     } 
+     let [itemStatus, setItemStatus] = useState(!props.isOrder? props.amount * props.price : "Cooking..." );
      
-     // console.log(props.price.slice(1))
      setTimeout(() => {
-          if (!props.isOrder) {
+          if (props.isOrder) {
                setItemStatus("Delivered");
           }
      }, 20000);
+
      return (
           <div className="item">
                <div className="item-status-container">
@@ -27,7 +24,7 @@ function Item(props) {
                </div>
                <p className="item-quantity">{props.amount}</p>
                <p className="item-price">{props.price}</p>
-               <p  className={`${props.isOrder? "item-price" : "item-status"}  ${itemStatus=="Delivered"? "done" : "progress"}` }>{itemStatus}</p>
+               <p  className={`${!props.isOrder? "item-price" : "item-status"}  ${itemStatus=="Delivered"? "done" : "progress"}` }>{itemStatus}</p>
           </div>
      )
 }
