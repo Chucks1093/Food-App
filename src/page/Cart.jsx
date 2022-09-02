@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 function Cart(props) {
      const [cartItems, setCartItems] = useState(getLocalStorage);
-     const [totalItemsNo, setTotalItemsNo] = useState(0)
+     const [totalItemsPrice, setTotalItemsPrice] = useState(0)
 
      const deleteItem = (id) => {
           let items = getLocalStorage();
@@ -16,7 +16,7 @@ function Cart(props) {
                }
           })
           setCartItems(items);
-          setTotalItemsNo(()=>{
+          setTotalItemsPrice(()=>{
                let initial = 0;
                items.forEach((item) => {
                     initial += (item.price * item.amount);
@@ -29,7 +29,7 @@ function Cart(props) {
 
      useEffect(()=>{
           setCartItems(getLocalStorage)
-          setTotalItemsNo(()=>{
+          setTotalItemsPrice(()=>{
                let initial = 0;
                cartItems.forEach((item) => {
                     initial += (item.price * item.amount);
@@ -62,11 +62,11 @@ function Cart(props) {
                </div>
                <div className='total-section'>
                     <p className='total-word'>Total : </p>
-                    <p className='total-value'>NGN {totalItemsNo}</p>
+                    <p className='total-value'>NGN {totalItemsPrice}</p>
                </div>
                <button 
                     onClick={(e)=>props.handleClick(e)} 
-                    className={`checkout-btn ${!totalItemsNo ? "hide-checkout-btn" : "" }`}>Checkout</button>
+                    className={`checkout-btn ${!totalItemsPrice ? "hide-checkout-btn" : "" }`}>Checkout</button>
           </div>
      )
 }
