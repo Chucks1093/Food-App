@@ -1,0 +1,137 @@
+.hero {
+     display: grid;
+     grid-template-columns: repeat(20, 1fr);
+     grid-template-rows: 87vh;
+     align-items: center;
+     grid-column: 1/-1;
+}
+
+.hero * {
+     /* border: 1px solid red; */
+}
+
+.hero-img-container {
+     grid-column: 12/21;
+     display: grid;
+     place-items: center;
+     position: relative;
+}
+
+.hero-content {
+     grid-column: 2/11;
+     min-width: 40rem;
+}
+
+.btn-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+
+.hero-image {
+     /* width: 100%; */
+     height: 135vh;
+     object-fit: cover;
+     object-position: 20% center;
+     border-radius: 50%;
+     /* border: 8px solid rgb(187, 129, 95); */
+     box-shadow: 0px 5px 10px 10px rgb(19, 17, 17);
+     z-index: 0;
+     position: relative;
+     left: 8%;
+
+}
+
+
+
+
+.hero-loader {
+     background-color: rgb(182, 100, 114);
+     opacity: 1;
+     display: grid;
+     place-items: center;
+     transition: 2s opacity linear;
+     width: 122%;
+     min-width: 30rem;
+     height: 135vh;
+     border-radius: 90% 0 0 90%;
+     z-index: 0;
+     position: absolute;
+     transform: translate(18%, 0%);
+     
+
+}
+
+.hero .hero-img-1 {
+     display: none;
+}
+
+
+.hero h1 {
+     font-size: 4rem;
+     color: aliceblue;
+     font-weight: 500;
+}
+
+.hero h1 > span {
+     color: #f5c994;
+}
+
+
+.hero .apple{
+     font-size: 3rem;
+     color: aliceblue;
+}
+
+.hero .ad-word {
+     font-size: 1.2rem;
+     margin-top: 1.9rem;
+     margin-bottom: 4rem;
+     color: #e2c39c;
+
+}
+
+.btn-container > div >div > p:last-child {
+     font-size: 1.2rem;
+     font-weight: 500;
+
+}
+
+.btn-container > div >div > p:first-child {
+     font-size: .8rem;
+     font-weight: 500;
+
+}
+
+
+.btn-container {
+     margin-top: 3rem;
+}
+
+.btn-container > div > div {
+     margin-left: 1rem;
+}
+
+.btn-container > div:last-child {
+     margin-right: auto;
+     margin-left: 4rem;
+}
+
+
+.btn-container > div {
+     height: 2.5rem;
+     border-radius: .5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgb(3, 3, 3);
+     color: aliceblue;
+     border: 1px solid aliceblue;
+     box-sizing: content-box;
+     padding: .8rem;
+}
+
+.btn-container > div > img {
+     height: 100%;
+}

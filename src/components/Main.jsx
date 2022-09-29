@@ -1,5 +1,7 @@
 
 import Card from "./Card";
+import '../styles/landing-main.css';
+
 
 function Main(props) {
      return (

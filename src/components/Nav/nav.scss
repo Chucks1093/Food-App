@@ -1,0 +1,116 @@
+
+@mixin flexCenter($direction) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: $direction;
+}
+
+
+@mixin gridCenter {
+     display: grid;
+     place-items: center;
+}
+
+@mixin screen($size) {
+     @media screen and (max-width : $size) {
+          @content;
+     }
+}
+@function hover($light-theme, $color) {
+     @if $light-theme {
+          @return lighten($color, 50%)
+     } @else {
+          @return darken($color, 50%)
+     }
+}
+
+
+
+.landing-nav-bar{
+     display: grid;
+     grid-template-columns: repeat(20, 1fr);
+     color: whitesmoke;
+     grid-column: 1/-1;
+     user-select: none;
+     z-index: 2;
+     backdrop-filter: blur(10px);
+}
+
+
+.landing-logo-container{
+     grid-column: 2/4;
+     min-width: fit-content;
+     display: flex;
+     align-items: center;
+
+     & .landing-logo{
+          height: 2.4rem;
+          width: 2.4rem;
+          border-radius: 50%;
+          margin-right: .6rem;
+     }
+
+     & .brand-name{
+          font-size: 1.4rem;
+          font-weight: bolder;
+          color: aliceblue;
+     }
+}
+
+
+.links {
+     font-size: 1.1rem;
+     font-weight: 500;
+     grid-column: 14/20;
+     min-width: 20rem;
+     z-index: 3;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     & a{
+          text-decoration: none;
+          height: 2.4rem;
+          width: 7.8rem;
+          @include gridCenter;
+          border-radius: .3rem;
+          font-weight: bolder;
+          color: #f5c994;
+          cursor: pointer;
+          font-size: 1.3rem;
+          &:hover{
+               color: #e2b885;
+          }
+     }
+
+     & .sign-btn {
+          background-color: #e2b885;
+          color: #00302d;
+          box-shadow: 0px 2px 10px 10px rgba(19, 17, 17, 0.24);
+          font-size: 1rem;
+          &:hover{
+               background-color: #b1916b;
+               color: hover(false, #00302d);
+               box-shadow: 0px 5px 100px 10px rgba(34, 34, 34, 0.178);
+          }
+     }
+}
+
+
+@include screen(800px){
+     .landing-logo-container{
+          grid-column: 2/6;
+     }
+     .links {
+          grid-column: 12/20;
+     }
+     .links a {
+          display: none;
+     }
+     .brand-name {
+          font-size: 1.5rem;
+     }
+}
+
+

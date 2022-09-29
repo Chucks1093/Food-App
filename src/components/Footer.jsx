@@ -1,3 +1,4 @@
+import '../styles/landing-footer.css';
 
 function Footer() {
      return (

@@ -1,0 +1,17 @@
+.form {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 7rem;
+     padding: 0 5rem;
+     margin-bottom: 7rem;
+     display: block;
+     grid-column: 1/-1;
+}
+
+.form-ori  {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+}

@@ -1,0 +1,6 @@
+.footer {
+     margin-top: 4rem;
+     background-color: #0b0e17;
+     padding: 4rem 5rem;
+     grid-column: 1/-1;
+}

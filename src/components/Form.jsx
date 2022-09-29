@@ -1,4 +1,4 @@
-
+import '../styles/landing-form.css';
 function Form() {
      return (
           <section className="form">
@@ -9,7 +9,7 @@ function Form() {
                </div>
                <form className="form-ori" onSubmit={(e)=>e.preventDefault()}>
                     <input type="text" placeholder="aniokechukwudi7@gmail.com" />
-                    <button type="submit" >Get notified</button>
+                    <button type="submit" >Get notified Now</button>
                </form>
           </section>
      )

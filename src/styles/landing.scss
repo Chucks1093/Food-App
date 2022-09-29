@@ -1,214 +1,23 @@
+$main-color: #00302d;
+
 .landing{
-     background-color: #00302d;
-}
-
-.landing-header{
-     height: calc(10vh + 1rem);
-     width: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0 1.9rem;
-     padding-left: 5rem;
-     color: whitesmoke;
-
-
-}
-.landing-header > div {
-     height: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-}
-
-
-.links{
-     width: 30%;
-}
-
-.landing-logo{
-     height: 3rem;
-     width: 3rem;
-     border-radius: 50%;
-
-     
-}
-
-.brand-name{
-     font-size: 2.1rem;
-     font-weight: bolder;
-     margin-left: .6rem;
-     color: aliceblue;
-}
-
-.links {
-     font-size: 1.3rem;
-     font-weight: 500;
-}
-.links p {
-     width: 10rem;
-     height: 3rem;
+     background-color: $main-color;
      display: grid;
-     place-items: center;
-     border-radius: .3rem;
-     font-weight: bold;
-     color: #f5c994;
-     cursor: pointer;
-     
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: 11vh;
+     overflow: hidden;
+     position: relative;
 }
 
-.links p:hover {
-     color: #e2b885;
-}
-.links > p:last-child{
-     background-color: #e2b885;
-     color: #00302d;
-     box-shadow: 0px 5px 100px 10px rgb(22, 22, 22);
-}
+
 
 /*======== Hero Section ========*/
-.hero {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     height: 80vh;
-     padding: 0 2.4rem 0 5rem;
-}
-.btn-container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-}
 
 
-.hero-img {
-     height: 42.5rem;
-     width: 43rem;
-     object-fit: cover;
-     object-position: 40% bottom;
-     border-radius: 50%;
-     border: 8px solid rgb(187, 129, 95);
-     box-shadow: 0px 70px 100px rgba(19, 17, 17, 0.404);
-
-}
-
-.hero-img-1{
-     height: 19rem;
-     width: 19rem;
-     box-sizing: content-box;
-     object-position: 30% 50%;
-     object-fit: cover;
-     border-radius: 50%;
-     border: 10px solid rgb(187, 129, 95);
-     box-shadow: 0px 70px 100px rgba(19, 17, 17, 0.404);
-}
-
-.hero-img-container {
-     position: relative;
-     margin-top: 8rem;
-     margin-right: 3rem;
-     /* background-color: blue; */
-}
-
-.hero-loader {
-     position: absolute;
-     background-color: rgb(182, 100, 114);
-     width: 100%;
-     height: 100%;
-     opacity: 1;
-     border-radius: 50%;
-     display: grid;
-     place-items: center;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%,-50%);
-     transition: 2s opacity linear;
-
-}
-
-.hero .hero-img-1 {
-     display: none;
-}
-
-
-.hero h1 {
-     font-size: 5rem;
-     color: aliceblue;
-     font-weight: 500;
-}
-
-.hero h1 > span {
-     color: #f5c994;
-}
-.hero > div {
-     position: relative;
-     bottom: 5%;
-}
-
-.hero .apple{
-     font-size: 3rem;
-     color: aliceblue;
-}
-
-.hero .ad-word {
-     font-size: 1.5rem;
-     margin-top: 1.9rem;
-     margin-bottom: 4rem;
-     color: #e2c39c;
-
-}
-
-.btn-container > div >div > p:last-child {
-     font-size: 1.2rem;
-     font-weight: 500;
-
-}
-
-.btn-container > div >div > p:first-child {
-     font-size: .8rem;
-     font-weight: 500;
-
-}
-
-
-.btn-container {
-     margin-top: 3rem;
-}
-
-.btn-container > div > div {
-     margin-left: 1rem;
-}
-
-.btn-container > div:last-child {
-     margin-right: auto;
-     margin-left: 4rem;
-}
-
-
-.btn-container > div {
-     /* width: 8rem; */
-     height: 3rem;
-     border-radius: .5rem;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     background-color: rgb(3, 3, 3);
-     color: aliceblue;
-     border: 1px solid aliceblue;
-     box-sizing: content-box;
-     padding: .8rem;
-}
-
-.btn-container > div > img {
-     height: 100%;
-}
 
 /*=========== Main Section ===========*/
 
-.main {
-     text-align: center;
-     margin-top: 2rem;
-}
+
 .main h1 {
      font-size: 2.9rem;
      color: aliceblue;
@@ -282,19 +91,13 @@
 
 /*=========== Form Section ===========*/
 
-.form {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-top: 7rem;
-     padding: 0 5rem;
-     margin-bottom: 7rem;
-}
+
 
 .form .form-content > h2 {
      font-size: 2.7rem;
      color: rgb(253, 199, 138);
      font-weight: bold;
+     
 }
 
 .form .form-content > p {
@@ -303,17 +106,13 @@
      margin-top: 2.4rem;
 }
 
-.form-ori  {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     
-}
+
 
 .form-ori input {
      width: 25rem;
      height: 3.4rem;
      border-radius: .4rem;
+     margin-left: auto;
      text-indent: 1rem;
      box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
 
@@ -337,11 +136,7 @@
 }
 /*=========== Footer Section ===========*/
 
-.footer {
-     margin-top: 4rem;
-     background-color: #0b0e17;
-     padding: 4rem 5rem;
-}
+
 
 .footer .company-info {
      display: flex;
@@ -421,18 +216,6 @@
 
 
 @media screen and (max-width : 800px) {
-     .landing-header {
-          height: 13vh;
-          padding: 0 1rem;
-          overflow: hidden;
-          /* background-color: red; */
-     }
-
-     .links {
-          width: 70%;
-          font-size: 1.2rem;
-          /* background-color: red; */
-     }
 
      .hero {
           height: 90vh;
@@ -443,9 +226,7 @@
           font-size: 1rem;
      }
 
-     .brand-name {
-          font-size: 1.5rem;
-     }
+    
      .hero .hero-img-1 {
           display: block;
           margin: 0 auto;
