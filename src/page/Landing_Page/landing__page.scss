@@ -1,6 +1,6 @@
 $main-color: #00302d;
 
-.landing{
+.landing-page{
      background-color: $main-color;
      display: grid;
      grid-template-columns: repeat(3, 1fr);
@@ -36,58 +36,6 @@ $main-color: #00302d;
      margin-top: 5.6rem;
 }
 
-.main .card {
-     width: 27%;
-     
-
-}
-
-.main .food-img {
-     width: 23rem;
-     height: 23rem;
-     object-fit: cover;
-     margin: 0 auto;
-     border-radius: 50%;
-     box-shadow: 0 0 100px rgba(0, 0, 0, 0.377);
-
-}
-
-.img-container{
-     position: relative;
-     /* width: fit-content; */
-     /* background-color: blue; */
-     margin: 0 auto;
-}
-
-.loader {
-     position: absolute;
-     background-color: rgb(182, 100, 114);
-     width: 23rem;
-     height: 23rem;
-     opacity: 1;
-     border-radius: 50%;
-     display: grid;
-     place-items: center;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%,-50%);
-     transition: 2s opacity linear;
-
-}
-
-.card h2 {
-     font-size: 2rem;
-     font-weight: bold;
-     color: rgb(253, 199, 138);
-     margin-top: 1rem;
-     letter-spacing: 2px;
-}
-
-.card > p {
-     font-size: 1.2rem;
-     margin-top: 1rem;
-     color: rgb(218, 206, 206);
-}
 
 /*=========== Form Section ===========*/
 

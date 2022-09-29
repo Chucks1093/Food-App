@@ -1,8 +1,8 @@
 
-import '../styles/menu.css';
-import fadeOut from './fadeOut';
+import './food-card.scss';
+import fadeOut from '../../functions/fadeOut';
 
-function Menu(props) {
+function FoodCard(props) {
      
      return(
           <div onClick={props.handleClick} className='menu'>
@@ -22,4 +22,4 @@ function Menu(props) {
      )
 }
 
-export default Menu;
+export default FoodCard;

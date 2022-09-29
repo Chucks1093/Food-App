@@ -1,10 +1,13 @@
+import './card.scss';
+import '../../functions/fadeOut';
+import fadeOut from '../../functions/fadeOut';
 
 function Card(props) {
 
      return(
           <div className="card">
                <div  className="img-container">
-                    <img onLoad={props.handleLoad} src={`${props.image}.jpg`} className="food-img" alt={props.name} />
+                    <img onLoad={fadeOut} src={`${props.image}.jpg`} className="food-img" alt={props.name} />
                     <div className="loader" >
                          <img  src="loader.svg" alt="" />    
                     </div> 

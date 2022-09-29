@@ -1,6 +1,6 @@
 
-import Card from "./Card";
-import '../styles/landing-main.css';
+import Card from "../Card/Card";
+import './main.scss';
 
 
 function Main(props) {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/item.css';
+import './item.scss';
 
 
 function Item(props) {

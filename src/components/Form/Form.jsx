@@ -1,4 +1,4 @@
-import '../styles/landing-form.css';
+import './form.scss';
 function Form() {
      return (
           <section className="form">

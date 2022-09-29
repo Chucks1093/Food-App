@@ -17,13 +17,14 @@
           @content;
      }
 }
+
 @function hover($light-theme, $color) {
      @if $light-theme {
           @return lighten($color, 50%)
      } @else {
           @return darken($color, 50%)
      }
-}
+};
 
 
 

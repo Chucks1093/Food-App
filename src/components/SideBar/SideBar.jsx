@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/nav.css'
-import getLocalStorage from './getLocalStorage';
-import getOrderStorage from './getOrderStorage';
+import './side-bar.scss';
+import getLocalStorage from '../../functions/getLocalStorage';
+import getOrderStorage from '../../functions/getOrderStorage';
 
 function Nav(props) {
      const navigate  = useNavigate();

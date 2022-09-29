@@ -1,7 +1,7 @@
-import '../styles/cart.css';
-import '../styles/orders.css';
-import Item from '../components/Item';
-import getLocalStorage from '../components/getLocalStorage';
+import './cart.scss';
+import './orders.scss';
+import Item from '../../components/Item/Item';
+import getLocalStorage from '../../functions/getLocalStorage';
 import { useState, useEffect } from 'react';
 
 function Cart(props) {

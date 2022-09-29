@@ -1,6 +1,6 @@
 
-import "../styles/profile.css";
-import "../styles/cart-modal.css";
+import "./profile.scss";
+import "../../components/Modals/cart-modal.scss";
 
 
 function Profile(props) {

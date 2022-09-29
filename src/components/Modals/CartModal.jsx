@@ -1,6 +1,6 @@
-import '../styles/cart-modal.css';
+import './cart-modal.scss';
 import { useState} from "react";
-import getLocalStorage from './getLocalStorage';
+import getLocalStorage from '../../functions/getLocalStorage';
 
 function CartModal(props) {
      const [quantity, setQuantity] = useState(0);

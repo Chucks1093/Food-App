@@ -1,7 +1,7 @@
-import "../styles/orders.css";
-import Item from "../components/Item";
+import "./orders.scss";
+import Item from "../../components/Item/Item";
 import { useState, useEffect } from "react";
-import getOrderStorage from "../components/getOrderStorage";
+import getOrderStorage from "../../functions/getOrderStorage";
 
 
 function Orders(props) {

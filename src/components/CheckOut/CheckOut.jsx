@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import getLocalStorage from './getLocalStorage';
-import getOrderStorage from './getOrderStorage';
-import '../styles/check-out.css';
+import getLocalStorage from '../../functions/getLocalStorage';
+import getOrderStorage from '../../functions/getOrderStorage';
+import './check-out.scss';
 
 function CheckOut(props) {
      const [word, setWord] = useState({text :"Make payment", mode: "" });

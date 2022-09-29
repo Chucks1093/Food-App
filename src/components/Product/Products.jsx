@@ -1,11 +1,11 @@
-import '../styles/products.css';
-import menuItems from './menuItems';
-import CartModal from './CartModal';
-import Orders from '../page/Orders';
-import Cart from '../page/Cart';
-import CheckOut from './CheckOut';
-import Profile from '../page/Profile';
-import Menu from './Menu';
+import './product.scss';
+import menuItems from '../../functions/menuItems';
+import CartModal from '../Modals/CartModal';
+import Orders from '../../page/Cart_&_Orders/Orders';
+import Cart from '../../page/Cart_&_Orders/Cart';
+import CheckOut from '../CheckOut/CheckOut';
+import Profile from '../../page/Profile/Profile';
+import Menu from '../Food__Card/FoodCard';
 import { useState } from 'react';
 
 function Products(props) {

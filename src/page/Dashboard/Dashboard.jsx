@@ -1,6 +1,6 @@
-import '../styles/dashboard.css'
-import Nav from '../components/Nav';
-import Products from '../components/Products';
+import './dashboard.scss'
+import Nav from '../../components/SideBar/SideBar';
+import Products from '../../components/Product/Products';
 import { useState } from 'react';
 
 function Dashboard() {

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import './nav.scss';
 import logo from './leaf.png';
 
-function Nav() {
+function TopNav() {
      const navigate =useNavigate();
      return(
           <nav className="landing-nav-bar">
@@ -17,4 +17,4 @@ function Nav() {
           </nav>
      )
 }
-export default Nav;
+export default TopNav;
