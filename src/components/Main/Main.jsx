@@ -5,8 +5,8 @@ import './main.scss';
 
 function Main(props) {
      return (
-          <main className="main">
-               <h1>Special Meals of the day !</h1>
+          <section className="main">
+               <h2>Special Meals of the day !</h2>
                <p>Check our specials of the day and get discount on all our meals <br />
                and swift delivery to whatever location in ilorin. </p>
                <div className="card-container">
@@ -14,7 +14,7 @@ function Main(props) {
                     <Card handleLoad={props.handleLoad} image="card-3"  name="Fried Meat" />
                     <Card handleLoad={props.handleLoad} image="card-2"  name="Burger Meal" />
                </div>
-          </main>
+          </section>
      )
 }
 

@@ -15,3 +15,46 @@
      align-items: center;
      
 }
+
+
+.form .form-content > h2 {
+     font-size: 2.7rem;
+     color: rgb(253, 199, 138);
+     font-weight: bold;
+     
+}
+
+.form .form-content > p {
+     color: aliceblue;
+     font-size: 1.2rem;
+     margin-top: 2.4rem;
+}
+
+
+
+.form-ori input {
+     width: 25rem;
+     height: 3.4rem;
+     border-radius: .4rem;
+     margin-left: auto;
+     text-indent: 1rem;
+     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
+
+     font-size: 1.2rem;
+     border: none;
+}
+
+.form-ori button {
+     width: 13rem;
+     height: 3.4rem;
+     border-radius: .4rem;
+     font-size: 1.2rem;
+     margin-left: 1rem;
+     color: #00302d;
+     background-color: #e2b885;
+     cursor: pointer;
+     font-weight: bold;
+     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
+     border: none;
+
+}

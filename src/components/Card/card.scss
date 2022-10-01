@@ -1,43 +1,52 @@
-.main .card {
-     width: 27%;
 
-}
-
-.main .food-img {
-     width: 23rem;
-     height: 23rem;
-     object-fit: cover;
+.card {
+     position: relative;
+     background-color: rgba(0, 0, 0, 0.377);
+     border-radius: .8rem;
+     width: 70%;
+     height: 10rem;
      margin: 0 auto;
-     border-radius: 50%;
-     box-shadow: 0 0 100px rgba(0, 0, 0, 0.377);
-
 }
 
 .img-container{
-     position: relative;
-     /* width: fit-content; */
-     /* background-color: blue; */
+     position: absolute;
+     bottom: 10%;
+     left: 50%;
+     transform: translateX(-50%);
      margin: 0 auto;
+
+     & .food-img {
+          width: 15rem;
+          height: 15rem;
+          object-fit: cover;
+          margin: 0 auto;
+          border-radius: 50%;
+          box-shadow: 0 0 100px rgba(0, 0, 0, 0.377);
+     }
+
+     & .loader {
+          position: absolute;
+          background-color: rgb(182, 100, 114);
+          width: 23rem;
+          height: 23rem;
+          opacity: 1;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          transition: 2s opacity linear;
+     }
+
 }
 
-.loader {
-     position: absolute;
-     background-color: rgb(182, 100, 114);
-     width: 23rem;
-     height: 23rem;
-     opacity: 1;
-     border-radius: 50%;
-     display: grid;
-     place-items: center;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%,-50%);
-     transition: 2s opacity linear;
-
+.card-details {
+     background-color: #0f0f0f;
 }
 
 .card h2 {
-     font-size: 2rem;
+     font-size: 1.2rem;
      font-weight: bold;
      color: rgb(253, 199, 138);
      margin-top: 1rem;
@@ -45,7 +54,7 @@
 }
 
 .card > p {
-     font-size: 1.2rem;
+     font-size: 1rem;
      margin-top: 1rem;
      color: rgb(218, 206, 206);
 }

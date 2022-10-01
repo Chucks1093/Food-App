@@ -2,12 +2,19 @@ $main-color: #00302d;
 
 .landing-page{
      background-color: $main-color;
+     background-image: url(grain.svg);
      display: grid;
      grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: 11vh;
+     grid-template-rows: 11vh auto auto auto auto;
      overflow: hidden;
-     position: relative;
+
+     & h1,h2,h3,h4,h5{
+          line-height: 1.2;
+     
+          
+     }
 }
+
 
 
 
@@ -18,70 +25,10 @@ $main-color: #00302d;
 /*=========== Main Section ===========*/
 
 
-.main h1 {
-     font-size: 2.9rem;
-     color: aliceblue;
-     margin-bottom: 1.5rem;
-}
-
-.main > p {
-     color: #e2c39c;
-     line-height: 2.2rem;
-     font-size: 1.3rem;
-}
-.main .card-container{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     margin-top: 5.6rem;
-}
-
-
 /*=========== Form Section ===========*/
 
 
 
-.form .form-content > h2 {
-     font-size: 2.7rem;
-     color: rgb(253, 199, 138);
-     font-weight: bold;
-     
-}
-
-.form .form-content > p {
-     color: aliceblue;
-     font-size: 1.2rem;
-     margin-top: 2.4rem;
-}
-
-
-
-.form-ori input {
-     width: 25rem;
-     height: 3.4rem;
-     border-radius: .4rem;
-     margin-left: auto;
-     text-indent: 1rem;
-     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
-
-     font-size: 1.2rem;
-     border: none;
-}
-
-.form-ori button {
-     width: 13rem;
-     height: 3.4rem;
-     border-radius: .4rem;
-     font-size: 1.2rem;
-     margin-left: 1rem;
-     color: #00302d;
-     background-color: #e2b885;
-     cursor: pointer;
-     font-weight: bold;
-     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
-     border: none;
-
-}
 /*=========== Footer Section ===========*/
 
 
@@ -165,63 +112,10 @@ $main-color: #00302d;
 
 @media screen and (max-width : 800px) {
 
-     .hero {
-          height: 90vh;
-          text-align: center;
-          margin-top: 1rem;
-     }
-     .hero .ad-word, .main >p {
-          font-size: 1rem;
-     }
-
-    
-     .hero .hero-img-1 {
-          display: block;
-          margin: 0 auto;
-          
-     }
      
-     .hero .hero-img-container {
-          display: none;
-     }
-     .hero h1 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-     }
-     .btn-container > div > div {
-          margin-left: 1rem;
-     }
      
-     .btn-container > div:last-child {
-          margin-right: 0;
-          margin-left: 0;
-     }
-     .btn-container > div {
-          height: 2rem;
-     }
+     
 
-     .btn-container .apple {
-          font-size: 2rem;
-     }
-
-     .main h1 {
-          font-size: 2rem;
-     }
-     .main .card-container {
-          flex-direction: column;
-          justify-content:space-between;
-          align-items: center;
-     }
-     .main .card {
-          width: 80%;
-          margin-bottom: 3rem;
-     }
-
-     .main .food-img {
-          margin:  0 auto;
-          width: 18.7rem;
-          height: 18.7rem;
-     }
 
      .loader{
           width: 18.7rem;

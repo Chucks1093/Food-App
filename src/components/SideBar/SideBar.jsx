@@ -10,7 +10,6 @@ function Nav(props) {
 
      useEffect(()=>{
           setFoodNo((value)=>{
-               console.log(value)
                return {
                     ...value,
                     cartNo: getLocalStorage(),
