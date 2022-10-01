@@ -1,7 +1,7 @@
 $main-color: #00302d;
 
 .landing-page{
-     background-color: $main-color;
+     background-color: #00302d;
      background-image: url(../grain.svg);
      display: grid;
      grid-template-columns: repeat(3, 1fr);
@@ -111,7 +111,9 @@ $main-color: #00302d;
 
 
 @media screen and (max-width : 800px) {
-
+     .landing-page {
+          background-color: #195c57;
+     }
      
      
      
