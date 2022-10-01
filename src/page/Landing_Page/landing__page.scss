@@ -2,7 +2,7 @@ $main-color: #00302d;
 
 .landing-page{
      background-color: $main-color;
-     background-image: url(../grain.svg);
+     background-image: url(grain.svg);
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: 11vh auto auto auto auto;
