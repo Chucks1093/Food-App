@@ -10,9 +10,9 @@ function Main(props) {
                <p>Check our specials of the day and get discount on all our meals <br />
                and swift delivery to whatever location in ilorin. </p>
                <div className="card-container">
-                    <Card handleLoad={props.handleLoad} image="card-1"  name="Stir fry Pasta" />
-                    <Card handleLoad={props.handleLoad} image="card-3"  name="Fried Meat" />
-                    <Card handleLoad={props.handleLoad} image="card-2"  name="Burger Meal" />
+                    <Card handleLoad={props.handleLoad} image="show-5"  name="Stir fry Pasta" />
+                    <Card handleLoad={props.handleLoad} image="show-4"  name="Fried Meat" />
+                    <Card handleLoad={props.handleLoad} image="show-6"  name="Burger Meal" />
                </div>
           </section>
      )

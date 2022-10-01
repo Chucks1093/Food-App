@@ -12,9 +12,15 @@ function Card(props) {
                          <img  src="loader.svg" alt="" />    
                     </div> 
                </div>
-               <h2>{props.name}</h2>
-               <p>Stir fry pasta yada yada yada <br />
-               because of Sasan.</p>
+               <div className="card-details">
+                    <h2>{props.name}</h2>
+                    <p>Stir fry pasta yada yada because of sasan</p>
+                    <div className="card-values">
+                         <img src="star-1.svg" alt="" className="card-star" />
+                         <p className="star-value">4.8</p>
+                         <p className="card-price">$23</p>
+                    </div>
+               </div>
           </div>
      )
 }

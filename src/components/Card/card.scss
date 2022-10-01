@@ -1,27 +1,48 @@
+@mixin screen($size) {
+     @media screen and (max-width : $size) {
+          @content;
+     }
+}
+
+@mixin gridCenter {
+     display: grid;
+     place-items: center;
+}
+
+
+
+$foodImg : 14rem;
 
 .card {
      position: relative;
-     background-color: rgba(0, 0, 0, 0.377);
-     border-radius: .8rem;
-     width: 70%;
-     height: 10rem;
+     $bgBr : rgb(184, 113, 73);
+     $bgBl : rgba(29, 27, 25, 0.836);
+     background: conic-gradient(transparent 25%, $bgBr 0% 50%, transparent 0% 75%, $bgBl 0%) 0/ 4em 4em, repeating-linear-gradient(45deg, $bgBl  0 2.83px, $bgBr 0 5.66px);
+     border-radius: 2.5rem;
+     height: $foodImg;
+     min-width: $foodImg + 5rem;
+     user-select: none;
      margin: 0 auto;
+     box-shadow: 9px 7px 6px rgba(19, 17, 17, 0.733);
 }
 
 .img-container{
      position: absolute;
-     bottom: 10%;
+     bottom: 50%;
      left: 50%;
-     transform: translateX(-50%);
+     transform: translate(-50%, 0%);
+     z-index: 1;
      margin: 0 auto;
+     transition: all 1s ease;
 
      & .food-img {
-          width: 15rem;
-          height: 15rem;
+          width: $foodImg;
+          height: $foodImg;
           object-fit: cover;
           margin: 0 auto;
           border-radius: 50%;
-          box-shadow: 0 0 100px rgba(0, 0, 0, 0.377);
+          transform: rotate(100deg);
+          box-shadow: 5px 0px 10px 7px rgba(19, 17, 17, 0.562);
      }
 
      & .loader {
@@ -42,19 +63,105 @@
 }
 
 .card-details {
-     background-color: #0f0f0f;
+     // background-color: #c45e5e;
+     border-radius:  0 0 2.5rem 2.5rem;
+     position: absolute;
+     width: 100%;
+     padding: 0 0 .3rem;
+     // height: 45%;
+     bottom: 5%;
+
+     & h2 {
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: wheat;
+     }
+
+     & > p {
+          margin: .6rem 0 .4rem;
+     }
+
+     & p {
+          font-size: .7rem;
+          color: rgb(218, 206, 206);
+     }
+
+     & .card-values {
+
+          
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          height: 2rem;
+          align-items: center;
+          width: 100%;
+          // background-color: aqua;
+          // border: 3px solid greenyellow;
+
+          & .card-star {
+               height: 55%;
+               grid-column: 2/2;
+               @include gridCenter;
+
+
+          }
+
+          & .star-value {
+               grid-column: 3/4;
+               font-weight: 500;
+          }
+          
+          & .card-price {
+               font-size: 1.1rem;
+               font-weight: bold;
+               @include gridCenter;
+               grid-column: 10/12;
+          }
+     }
+
+     
 }
 
-.card h2 {
-     font-size: 1.2rem;
-     font-weight: bold;
-     color: rgb(253, 199, 138);
-     margin-top: 1rem;
-     letter-spacing: 2px;
+@include screen(700px) {
+     $foodImg : 13rem;
+
+     .card {
+          height: $foodImg;
+          min-width: $foodImg + 4rem;
+     }
+
+     .img-container{
+     
+          & .food-img {
+               width: $foodImg;
+               height: $foodImg;
+
+          }
+     }
+
+     .card-details {
+          padding: 0 0 .7rem;
+
+          & h2 {
+               font-size: 1rem;
+          }
+
+          & > p {
+               margin: .45rem 0 .3rem;
+          }
+
+          & p {
+               font-size: .64rem;
+          }
+
+          & .card-values {
+               height: 1.4rem;
+
+               & .card-price {
+                    font-size: .8rem;
+               }
+          }
+     }
+
 }
 
-.card > p {
-     font-size: 1rem;
-     margin-top: 1rem;
-     color: rgb(218, 206, 206);
-}
+

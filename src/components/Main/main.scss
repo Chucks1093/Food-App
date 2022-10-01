@@ -22,13 +22,13 @@
 .main {
      text-align: center;
      grid-column: 1/-1;
-     border: 4px solid red;
+     // border: 4px solid red;
 
      & > h2 {
           font-size: 2.5rem;
           color: aliceblue;
           margin-bottom: 1.5rem;
-          font-weight: 700;
+          font-weight: 500;
      }
 
      & > p {
@@ -40,15 +40,13 @@
      & .card-container {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
-          grid-template-rows: auto auto;
+          grid-template-rows: auto ;
           grid-auto-rows: auto;
           grid-gap: 5px;
-          row-gap: 2rem;
-          // justify-content: center;
+          row-gap: 9rem;
           align-items: center;
-          margin: 7rem auto 0;
-          grid-auto-flow: dense;
-          border: 4px solid purple;
+          margin: 9rem auto 0;
+          // border: 4px solid purple;
      }
 }
 
@@ -58,12 +56,12 @@
      .main {
           
 
-          & h2{
-               font-size: 2rem;
+          & > h2{
+               font-size: 1.55rem;
           }
 
           & > p {
-               font-size: .8rem;
+               font-size: .685rem;
           }
 
           

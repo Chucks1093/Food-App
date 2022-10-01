@@ -1,14 +1,15 @@
 $main-color: #00302d;
 
 .landing-page{
-     background-color: #00302d;
+     background-color: #04413c;
      background-image: url(../grain.svg);
      display: grid;
      grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: 11vh auto auto auto auto;
+     grid-template-rows: 11vh repeat(5, auto);
      overflow: hidden;
 
      & h1,h2,h3,h4,h5{
+
           line-height: 1.2;
      
           
@@ -110,9 +111,9 @@ $main-color: #00302d;
 
 
 
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 700px) {
      .landing-page {
-          background-color: #195c57;
+          background-color: #15504c;
      }
      
      
