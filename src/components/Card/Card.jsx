@@ -14,7 +14,7 @@ function Card(props) {
                </div>
                <div className="card-details">
                     <h2>{props.name}</h2>
-                    <p>Stir fry pasta yada yada because of sasan</p>
+                    <p>Stir fry pasta yada yada because of sasan.</p>
                     <div className="card-values">
                          <img src="star-1.svg" alt="" className="card-star" />
                          <p className="star-value">4.8</p>

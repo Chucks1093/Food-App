@@ -1,60 +1,192 @@
+@mixin screen($size) {
+     @media screen and (max-width : $size) {
+          @content;
+     }
+}
+
 .form {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
      margin-top: 7rem;
-     padding: 0 5rem;
-     margin-bottom: 7rem;
-     display: block;
      grid-column: 1/-1;
+     grid-row: 4/5;
+     // border: 4px solid yellow;
+
 }
 
-.form-ori  {
+.form * {
+     // border: 1px solid red;
+}
+.form-content {
+
+     & h2 {
+          font-size: 2.5rem;
+          color: aliceblue;
+          text-align: center;
+          font-weight: 500;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+     }
+     
+     & > p {
+          color: wheat;
+          line-height: 1.6;
+          font-size: 1.1rem;
+          text-align: center;
+     }
+
+}
+
+.form-ori {
      display: flex;
-     justify-content: space-between;
-     align-items: center;
+     justify-content: center;
+     margin: 2rem 0 0;
+     
+     & input {
+          height: 3.4rem;
+          width: 27.5rem;
+          border-radius: .4rem;
+          text-indent: 1rem;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
+          font-size: 1.2rem;
+          display: block;
+          border: none;
+     }
+
+     & button {
+          width: 13rem;
+          height: 3.4rem;
+          border-radius: .4rem;
+          font-size: 1.2rem;
+          margin-left: 1rem;
+          color: #00302d;
+          background-color: #e2b885;
+          cursor: pointer;
+          font-weight: bold;
+          box-shadow: 0px 5px 10px rgba(19, 17, 17, 0.445);
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+
+          & p {
+               margin-left: .4rem;
+               
+          }
+
+          & img {
+               height: 2rem;
+          }
+     }
+}
+
+@include screen(700px) {
+     .form {
+          // margin-top: 2rem;
+          // padding: 0 2rem;
+     }
+
+     .form-content {
+          
+          // padding: 0 2rem;
+
+          & h2 {
+               font-size: 2rem;
+          }
+
+          & p {
+               font-size: .8rem;
+          }
+     }
+     .form-ori {
+          position: relative;
+          width: 92%;
+          margin: 2rem auto 0;
+
+
+
+          & input {
+               width: 100%;
+          }
+
+          & button{
+               position: absolute;
+               right: 0%;
+               width: 9rem;
+               font-size: 1rem;
+               border-radius: 0 .4rem .4rem 0;
+
+               & p {
+                    margin-left: .1rem;
+               }
+
+               & img { 
+                    height: 1.5rem;
+               }
+          }
+     }
+     
+
      
 }
 
+@include screen(430px) {
+     .form {
+          margin-top: 3rem;
+     }
 
-.form .form-content > h2 {
-     font-size: 2.7rem;
-     color: rgb(253, 199, 138);
-     font-weight: bold;
-     
+     .form-content {
+
+          & h2 {
+               font-size: 1.4rem;
+               padding: 0 .5rem;
+               margin-bottom: .8rem;
+          }
+
+          & p {
+               font-size: .725rem;
+          }
+     }
+
+     .form-ori {
+          display: block;
+          margin: 1rem auto 0 ;
+
+          & input {
+               height: 2.7rem;
+               width: 18rem;
+               margin: 0 auto;
+               font-size: .9rem;
+
+               &::placeholder {
+                    font-size: .8rem;
+               }
+          }
+          & > button {
+               // width: 7rem;
+               height: 2.6rem;
+               position: relative;
+               width: 9rem;
+               margin: 1.5rem auto 0;
+               border-radius: .4rem;
+               box-shadow: 0px 5px 10px rgba(19, 17, 17, 0.445);
+
+               &:active{
+                    box-shadow: 0px 5px 10px rgba(19, 17, 17, 0);
+               }
+
+               & p {
+                    margin-left: 0.2rem;
+                    font-size: .8rem;
+                    margin-right: .3rem;
+
+               }
+
+               & img {
+                    height: 1.2rem;
+               }
+
+          }
+     }
+
 }
 
-.form .form-content > p {
-     color: aliceblue;
-     font-size: 1.2rem;
-     margin-top: 2.4rem;
-}
-
-
-
-.form-ori input {
-     width: 25rem;
-     height: 3.4rem;
-     border-radius: .4rem;
-     margin-left: auto;
-     text-indent: 1rem;
-     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
-
-     font-size: 1.2rem;
-     border: none;
-}
-
-.form-ori button {
-     width: 13rem;
-     height: 3.4rem;
-     border-radius: .4rem;
-     font-size: 1.2rem;
-     margin-left: 1rem;
-     color: #00302d;
-     background-color: #e2b885;
-     cursor: pointer;
-     font-weight: bold;
-     box-shadow: 0 0 30px rgba(0, 0, 0, 0.089);
-     border: none;
-
-}

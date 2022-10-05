@@ -1,8 +1,21 @@
 @font-face {
      font-family: "Montserrat" ;
-     src: url(./Montserrat/Montserrat-Bold.ttf);
+     src: url(./Poppins/Poppins-SemiBold.ttf);
 };
 
+@font-face {
+     font-family: "Poppins-B" ;
+     src: url(./Poppins/Poppins-Bold.ttf);
+};
+
+@font-face {
+     font-family: "Poppins" ;
+     src: url(./Poppins/Poppins-Regular.ttf);
+};
+
+html {
+     scroll-behavior: smooth;
+}
 * {
      margin: 0;
      padding: 0;

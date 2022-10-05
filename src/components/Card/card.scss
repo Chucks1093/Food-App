@@ -33,7 +33,7 @@ $foodImg : 14rem;
      transform: translate(-50%, 0%);
      z-index: 1;
      margin: 0 auto;
-     transition: all 1s ease;
+     transition: all 1s ease-in-out;
 
      & .food-img {
           width: $foodImg;
@@ -78,11 +78,13 @@ $foodImg : 14rem;
      }
 
      & > p {
-          margin: .6rem 0 .4rem;
+          margin: .6rem 0 .2rem;
+          font-family: "Poppins" ;
+          
      }
 
      & p {
-          font-size: .7rem;
+          font-size: .6rem;
           color: rgb(218, 206, 206);
      }
 
@@ -98,7 +100,7 @@ $foodImg : 14rem;
           // border: 3px solid greenyellow;
 
           & .card-star {
-               height: 55%;
+               height: 45%;
                grid-column: 2/2;
                @include gridCenter;
 
@@ -108,6 +110,7 @@ $foodImg : 14rem;
           & .star-value {
                grid-column: 3/4;
                font-weight: 500;
+               font-size: .9rem;
           }
           
           & .card-price {
@@ -136,32 +139,48 @@ $foodImg : 14rem;
                height: $foodImg;
 
           }
+
      }
+
+    
+
+}
+
+@include screen(430px) {
 
      .card-details {
           padding: 0 0 .7rem;
-
+ 
           & h2 {
-               font-size: 1rem;
+               font-size: 1.1rem;
           }
 
           & > p {
-               margin: .45rem 0 .3rem;
+               margin: .45rem 0 .4rem;
+               font-size: .57rem;
+               font-weight: 550;
           }
 
-          & p {
-               font-size: .64rem;
-          }
-
+          
           & .card-values {
                height: 1.4rem;
+               
+              
+               & .card-star {
+                    height: 60%;
+                    font-size: .74rem;
+                    position: relative;
+                    bottom: 6%;
+               }
 
+               & .star-value {
+                    font-size: .7rem;
+               }
                & .card-price {
                     font-size: .8rem;
                }
           }
      }
-
 }
 
 

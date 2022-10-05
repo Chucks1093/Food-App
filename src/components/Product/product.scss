@@ -5,19 +5,23 @@
      overflow-x: hidden;
 }
 
+.products * {
+     // border: 1px solid red;
+}
+
 .products header {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     margin-top: 6rem;
+     margin-top: 4rem;
      padding: 0 2.5rem;
      margin-bottom: 3rem;
 }
 
 .products .user {
      border-radius: 50%;
-     height: 5rem;
-     width: 5rem;
+     height: 3rem;
+     width: 3rem;
      object-fit: cover;
      object-position: top;
      filter: grayscale(.3);
@@ -25,14 +29,16 @@
 }
 
 .products .greetings {
-     font-size: 2rem;
+     font-size: 1.7rem;
      font-weight: 700;
      color: #08756a;
 }
 
 .products .greetings span {
-     font-size: 1rem;
+     font-size: .8rem;
      font-weight: 500;
+     display: block;
+     margin-top: .7rem;
 
 }
 

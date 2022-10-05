@@ -21,27 +21,23 @@ function Footer() {
                          <p>Privacy Policy</p>
                          <p>Terms Of Service</p>
                     </div>
-                    <div>
+                    <div className="column" >
                          <h3>Install App</h3>
                          <div className="install-container">
-                              <div>
-                                   <i className="ri-apple-fill apple"></i>
-                                   <div>
-                                        <p>GET ON</p>
-                                        <p className="app-name">App Store</p>
-                                   </div>
+                              <div className='apple-btn'>
+                                 <i className="ri-apple-fill apple"></i>
+                                   <p className='btn-word'>GET ON</p>
+                                   <p className='source'>App Store</p>
                               </div>
-                              <div>
+                              <div className='google-btn'>
                                    <img src="google.svg" alt="" />
-                                   <div>
-                                        <p>Download from</p>
-                                        <p className="app-name">Google Play</p>
-                                   </div>
+                                   <p className='btn-word'>Download from</p>
+                                   <p className='source'>Google Play</p>
                               </div>
                          </div>
                     </div>
                </div>
-               <hr />
+               {/* <hr /> */}
                <div className="company-sign">
                     <p>{`© ${new Date().getFullYear()} Lilies. All rights reserved`}</p>
                     <div className="social-icons">

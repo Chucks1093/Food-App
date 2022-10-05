@@ -23,6 +23,7 @@ function Register() {
                     <div className='login-image-container'>
                          <div className='login-image-cover'></div>
                          <img onLoad={fadeOut} className='login-image' src="reg-img.jpg" alt="" />
+                         <img className='logo' src="leaf-svg" alt="" />
                          <div className='login-image-loader'>
                               <img src="loader.svg" alt="" />
                          </div>

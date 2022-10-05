@@ -1,3 +1,7 @@
+.nav-bar * {
+     // border: 1px solid red;
+}
+
 .nav-bar {
      background-color: rgb(255, 253, 251);
 }
@@ -11,7 +15,7 @@
 .nav-logo-container {
      display: flex;
      align-items: center;
-     height: 7rem;
+     height: 5rem;
 }
 
 .nav-logo-container img {
@@ -20,9 +24,9 @@
 }
 
 .nav-logo-container p {
-     font-size: 3.5rem;
+     font-size: 2rem;
      font-weight: 500;
-     margin-left: 1rem;
+     margin-left: .4rem;
      color: rgb(172, 172, 172);
 }
 
@@ -32,8 +36,8 @@
      align-items: center;
      margin-left: 2.5rem;
      padding-left: 1rem;
-     height: 3.7rem;
-     margin-bottom: 3rem;
+     margin-bottom: 1.8rem;
+     padding: .7rem 0 .7rem 1rem  ;
      position: relative;
      width: 85%;
      transition: 1s all ease;
@@ -48,20 +52,20 @@
      color: rgb(136, 128, 128); 
 }
 .nav-option i {
-     font-size: 2.5rem;
+     font-size: 2rem;
      cursor: pointer;
      margin-right: 1rem;
 }
 
 .nav-option h3 {
-     font-size: 1.4rem;
+     // font-size: 1.1rem;
      cursor: pointer;
 }
 
 .nav-option span {
      position: absolute;
-     width: 3rem;
-     height: 3rem;
+     width: 2.2rem;
+     height: 2.2rem;
      right: 5%;
      top: 50%;
      transform: translateY(-50%);

@@ -22,7 +22,7 @@ function Nav(props) {
           <nav className='nav-bar'>
                <div className='nav-top'>
                     <div className='nav-logo-container'>
-                         <img onClick={()=> navigate("/")} src="leaf.png" alt="" />
+                         <img onClick={()=> navigate("/")} src="logo-blue.svg" alt="" />
                          <p>Lilies</p>
                     </div>
                </div>

@@ -16,12 +16,15 @@
      }
 }
 
+
 .hero {
      display: grid;
      grid-template-columns: repeat(20, 1fr);
      grid-template-rows: 87vh;
      align-items: center;
      grid-column: 1/-1;
+     grid-row: 2/3;
+     
      // border: 4px solid yellow;
 }
 
@@ -76,17 +79,18 @@
      // border: 4px dashed rgb(0, 183, 255);
 
      & h1{
-          font-size: 4rem;
+          font-size: 3.7rem;
           color: aliceblue;
           font-weight: 500;
           line-height: 1.2;
 
           & .advantage{
                color: #f5c994;
+               font-family: "Montserrat";
           }
 
           & .first-word{
-               font-size: 4.1rem;
+               font-size: 4rem;
           }
      }
 
@@ -110,7 +114,7 @@
           $btnColor : #dddcdc;
           height: 3rem;
           border-radius: .5rem;
-          background-color: rgb(20, 20, 20);
+          background-color: rgb(37, 36, 36);
           color: $btnColor ;
           border: 1px solid $btnColor ;
           padding: .5rem;
@@ -205,10 +209,7 @@
                     height: 80%;
                }
           }
-     }
-
-
-     
+     } 
 }
 
 
@@ -222,7 +223,7 @@
                font-size: 3rem;
 
                & .first-word {
-                    font-size: 3.7rem;
+                    font-size: 3.5rem;
                }
           }
 
@@ -237,14 +238,15 @@
      
 }
 
+
 @include screen(700px) {
      .hero {
-          grid-template-rows: .55fr .45fr;
+          grid-template-rows: .5fr .65fr;
           grid-template-columns: repeat(12, 1fr);
           height: 78vh;
           padding-bottom: 0;
      }
-
+     
      .hero-img-container {
           grid-row: 1/2;
           grid-column: 1/21;
@@ -255,7 +257,7 @@
           bottom: 0%;
 
           & .hero-image {
-               width: 150vw;
+               width: 110vw;
                height: auto;
                margin: 0 auto;
                position: absolute;
@@ -263,7 +265,7 @@
                left: 50%;
                transform: translateX(-50%) rotate(187deg);
                box-shadow: 0px 5px 10px 7px rgb(19, 17, 17);
-               filter: contrast(65%);
+               // filter: contrast(65%);
           }
 
      }
@@ -278,18 +280,64 @@
           padding-bottom: 0;
 
           & h1{
-               font-size: 2rem;
+               font-size: 2.5rem;
 
                & .first-word {
-                    font-size: 2.5rem;
+                    font-size: 2.7rem;
                }
           }
 
           & .ad-word {
-               font-size: .61rem;
+               font-size: .8rem;
                margin-top: .9rem;
                margin-bottom: 1.8rem;
                line-height: 1.7;
+               font-weight: 400;
+          }
+     }
+}
+
+@include screen(430px) {
+     .hero {
+          grid-template-rows: .55fr .45fr;
+          grid-template-columns: repeat(12, 1fr);
+          height: 78vh;
+          padding-bottom: 0;
+          margin-bottom: 4.3rem;
+     }
+
+     .hero-img-container {
+
+          & .hero-image {
+               width: 134vw;
+               box-shadow: 0px 0px 10px 10px rgba(8, 8, 8, 0.829);
+               filter: contrast(79%);
+               
+          }
+
+     }
+
+     .hero-content {
+
+          & h1{
+               font-size: 1.8rem;
+               font-family: "Montserrat";
+
+               & .first-word {
+                    font-size: 2.5rem;
+                    font-family: "Montserrat";
+
+               }
+          }
+
+          & .ad-word {
+               font-size: .55rem;
+               font-family: "Poppins" ;
+               font-weight: 600;
+               margin-top: .9rem;
+               margin-bottom: 1.8rem;
+               line-height: 1.9;
+               color: wheat;
           }
      }
 }

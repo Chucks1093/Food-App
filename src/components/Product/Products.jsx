@@ -47,7 +47,7 @@ function Products(props) {
                />
                <Profile activeModal={props.elementName} />
                <header>
-                    <p className='greetings'>Good Morning, Sebastian!<br/> <span>What delicious meal are you craving for today?</span></p>
+                    <p className='greetings'>Good Morning to you ! <span>What delicious meal are you craving for today?</span></p>
                     <img className='user' src="p-1.jpg" alt="" ></img>
                </header>
                <section className='menu-container'>

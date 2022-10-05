@@ -6,7 +6,7 @@ function Hero(props) {
           <section className="hero">
                <div className='hero-content'>
                     <h1> <span className='first-word'>O</span>rder food <span className='advantage'>anytime,</span>  <br/> anywhere. </h1>
-                    <p className="ad-word">Browse from our list of specials to place your order and have food <br /> delivered to you, in no time. Affordable, tasty and fast ! </p>
+                    <p className="ad-word">Browse from our special list to place your order  and have  food <br />  delivered to you in no time. Affordable and tasty ! </p>
                     <div className="btn-container">
                          <div className='apple-btn'>
                               <i className="ri-apple-fill apple"></i>
