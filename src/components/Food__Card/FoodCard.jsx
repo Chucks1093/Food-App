@@ -14,7 +14,7 @@ function FoodCard(props) {
                </div>
                <h2 className='menu-name'>Stir Fry Pasta</h2>
                <p className='menu-info'>The in-house pasta and chicken by chef moose.</p>
-               <div>
+               <div className='menu-value'>
                     <p className='menu-price'>{`N ${props.price}`}</p>
                     <button className='menu-cart-btn'>Add <i className="ri-shopping-cart-line"></i></button>
                </div>

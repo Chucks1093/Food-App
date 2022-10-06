@@ -3,6 +3,7 @@ import menuItems from '../../functions/menuItems';
 import CartModal from '../Modals/CartModal';
 import Orders from '../../page/Cart_&_Orders/Orders';
 import Cart from '../../page/Cart_&_Orders/Cart';
+import Card from '../Card/Card';
 import CheckOut from '../CheckOut/CheckOut';
 import Profile from '../../page/Profile/Profile';
 import Menu from '../Food__Card/FoodCard';
@@ -53,10 +54,10 @@ function Products(props) {
                <section className='menu-container'>
                     {menuItems.map((item , i)=>{
                          return (
-                              <Menu  
+                              <Card  
                                    key={i} 
                                    handleClick={changeModalDetails} 
-                                   img={item.img} 
+                                   image={item.img} 
                                    price={item.price}
                               />
                          )

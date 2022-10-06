@@ -8,9 +8,9 @@ function Card(props) {
           <div className="card">
                <div  className="img-container">
                     <img onLoad={fadeOut} src={`${props.image}.jpg`} className="food-img" alt={props.name} />
-                    <div className="loader" >
+                    {/* <div className="loader" >
                          <img  src="loader.svg" alt="" />    
-                    </div> 
+                    </div>  */}
                </div>
                <div className="card-details">
                     <h2>{props.name}</h2>

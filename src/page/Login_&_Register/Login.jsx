@@ -27,7 +27,7 @@ function Login() {
                </div>
                <div className='login-form-container'>
                     <img className='logo top' src="pic-3.jpg" alt="" />
-                    <img className='logo bottom' src="show-6.jpg" alt="" />
+                    {/* <img className='logo bottom' src="show-6.jpg" alt="" /> */}
                     <form onSubmit={(e)=>e.preventDefault()} className='login-form'>
                          <h1>Welcome Back !</h1>
                          <input type="email" required placeholder='Your Email address' />

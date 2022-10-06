@@ -5,9 +5,6 @@
      overflow-x: hidden;
 }
 
-.products * {
-     // border: 1px solid red;
-}
 
 .products header {
      display: flex;
@@ -43,8 +40,9 @@
 }
 
 .menu-container {
-     display: flex;
-     justify-content: space-between;
-     padding: 2rem 5rem 0;
-     flex-wrap: wrap;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+     justify-content: center;
+     grid-row: auto;
+     grid-auto-rows: auto;
 }

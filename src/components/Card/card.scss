@@ -152,7 +152,7 @@ $foodImg : 14rem;
           padding: 0 0 .7rem;
  
           & h2 {
-               font-size: 1.1rem;
+               font-size: 1.2rem;
           }
 
           & > p {
@@ -164,17 +164,18 @@ $foodImg : 14rem;
           
           & .card-values {
                height: 1.4rem;
+               align-content: center;
+               align-items: center;
                
               
                & .card-star {
                     height: 60%;
-                    font-size: .74rem;
-                    position: relative;
-                    bottom: 6%;
+
                }
 
                & .star-value {
                     font-size: .7rem;
+                    margin-right: 3.5rem;
                }
                & .card-price {
                     font-size: .8rem;

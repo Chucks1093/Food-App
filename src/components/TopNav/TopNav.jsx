@@ -17,7 +17,7 @@ function TopNav() {
                          <p className="brand-name">Lilies</p>
                     </div>
                     <ul className="links">
-                         <li><a href="#">Home</a></li>
+                         <li><a href="#" onClick={showMenu} >Home</a></li>
                          <li><a className="reg-login-btn" onClick={()=>navigate('/login')}>Login</a></li>
                          <li><a className="sign-btn" onClick={()=>navigate('/register')}>Sign Up</a></li>
                     </ul>

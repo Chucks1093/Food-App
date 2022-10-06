@@ -3,3 +3,21 @@
           @content;
      }
 }
+
+@mixin roundImg($value) {
+     border-radius: 50%;
+     width: $value;
+     height: $value;
+     object-fit: cover;
+}
+
+@mixin gridCenter {
+     display: grid;
+     place-items: center;
+}
+
+@mixin reveal($value) {
+     & * {
+          border: 1px solid $value ;
+     }
+}

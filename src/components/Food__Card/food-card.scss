@@ -1,54 +1,55 @@
+@use  "../../Sass-Library/abstracts" as *;
+
+
 .menu {
-     width: 19rem;
+     width: 16rem;
+     margin: 0 auto;
      border-radius: .7rem;
      box-shadow: 0 0px 10px rgba(36, 35, 35, 0.062);
      padding-top: 1rem;
      padding: 0 .7rem 0;
      border: none;
-     margin-bottom: 4rem;
      background-color: rgb(252, 247, 249);
+     @include reveal(red);
 }
 
 .menu-img-container {
      position: relative;
+
+     .menu-img {
+          @include roundImg(6rem);
+          margin: 0 auto;
+          object-position: center 70%;
+          box-shadow: 0 10px 20px rgba(36, 35, 35, 0.493);
+     
+     }
+     .menu-image-loader {
+          transition: 4s opacity linear;
+          background-color: rgb(182, 100, 114);
+          position: absolute;
+          @include roundImg(6rem);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 1;
+          left: 50%;
+          transform: translateX(-50%);
+     
+     }
 }
 
 
-.menu-img {
-     width: 10rem;
-     height: 10rem;
-     border-radius: 50%;
-     object-fit: cover;
-     margin: 0 auto;
-     object-position: center 70%;
-     box-shadow: 0 10px 20px rgba(36, 35, 35, 0.493);
 
-}
-
-.menu-img-container .menu-image-loader {
-     transition: 4s opacity linear;
-     background-color: rgb(182, 100, 114);
-     position: absolute;
-     width: 10rem;
-     height: 10.3rem;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border-radius: 50%;
-     opacity: 1;
-     left: 50%;
-     transform: translateX(-50%);
-
-}
 
 .menu-name {
      text-align: center;
      margin-top: 1.6rem;
      color: #01645e;
+     font-size: 1.2rem;
 }
 
 .menu .menu-info{
-     font-size: 1.1rem;
+     font-size: .8rem;
      font-weight: 400;
      text-align: center;
      padding: 0 1rem;
@@ -58,7 +59,7 @@
 }
 
 
-.menu div {
+.menu-value {
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -67,25 +68,28 @@
      font-size: 1.1rem;
      font-weight: bold;
      margin-bottom: 1.8rem;
+
+     .menu-price {
+          color: #01645e;
+          font-size: .8rem;
+     }
+
+     .menu-cart-btn {
+          background-color: transparent;
+          border: none;
+          font-size: .8rem;
+          font-weight: 500;
+          background-color: #02554f;
+          height: 2rem;
+          // @include gridCenter;
+          width: 6rem;
+          color:rgb(255, 255, 255);
+          cursor: pointer;
+          border-radius: .2rem;
+     }
 }
 
-.menu .menu-cart-btn {
-     background-color: transparent;
-     border: none;
-     font-size: 1.05rem;
-     font-weight: 500;
-     background-color: #02554f;
-     padding: .6rem;
-     width: 6rem;
-     color:rgb(255, 255, 255);
-     cursor: pointer;
-     border-radius: .5rem;
-}
 
 .menu-cart-btn:hover {
      background-color: #01756e;
-}
-
-.menu-price {
-     color: #01645e;
 }
