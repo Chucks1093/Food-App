@@ -18,30 +18,26 @@ function Login() {
      return (
           <div className='login-page'>
                <div className='login-image-container'>
-                    <img className='logo' src="logo-white.svg" alt="" />
                     <img src='grain.svg' className='login-image-cover' />
-                    <img  className='login-image' src="lily.jpg" alt="" />
+                    <img src='grain.svg' className='login-image-cover' />
+                    <img onLoad={fadeOut}   className='login-image' src="lily.jpg" alt="" />
                     <div className='login-image-loader'>
-                         {/* <img src="loader.svg" alt="" /> */}
+                         <img className='logo' src="logo-white.svg" alt="" />
                     </div>
                </div>
                <div className='login-form-container'>
-                    <img className='logo top' src="pic-3.jpg" alt="" />
-                    {/* <img className='logo bottom' src="show-6.jpg" alt="" /> */}
-                    <form onSubmit={(e)=>e.preventDefault()} className='login-form'>
-                         <h1>Welcome Back !</h1>
-                         <input type="email" required placeholder='Your Email address' />
-                         <div className='login-password'>
-                              <input type={type.input} placeholder='Your Password'/>
-                              <button onClick={tooglePassword} className={`show-btn ${type.visible? "ri-eye-line" : "ri-eye-off-line"}`}></button>
-                         </div>
-                         <button onClick={()=> navigate("/dashboard")} className='login-btn' type="submit">LOGIN</button>
-                         <div className='options'>
-                              <p onClick={()=> navigate("/register")}>Create Account</p>
-                              <p>Forgot Password</p>
-                         </div>
-                         <img className='logo' src="leaf-svg.svg" alt="" />
-                    </form>
+                    <div className='login-form-content'>
+                         <h1>Welcome back.</h1>
+                         <form onSubmit={(e)=>e.preventDefault()} className='login-form'>
+                              <label htmlFor="name">Email</label>
+                              <input type="email" required id='name' />
+                              <label htmlFor="password">Password</label>
+                              <input type={type.input}  id='password'/>
+                              <i onClick={tooglePassword} className={`show-btn ${type.visible? "ri-eye-line" : "ri-eye-off-line"}`}></i>
+                              <label className='sign-up' htmlFor="">Don't have an account ? <a onClick={()=> navigate("/register")} >Sign Up</a> </label>
+                              <button onClick={()=> navigate("/dashboard")} className='login-btn' type="submit">LOGIN</button>
+                         </form>
+                    </div>
                </div>
           </div>
      )

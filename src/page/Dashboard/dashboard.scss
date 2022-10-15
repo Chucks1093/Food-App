@@ -1,8 +1,11 @@
 .dashboard {
      display: grid;
-     grid-template-columns: 30% 70%;
+     grid-template-columns: 25% 75%;
      height: 100vh;
      position: relative;
+     background-image: url(../lily.jpg);
+     background-size: cover;
+     background-position: center 80%;
 }
 
 
@@ -11,7 +14,8 @@
      width: 100vw;
      height: 100vh;
      right: 0;
-     background-color: rgba(164, 165, 163, 0.473);
+     // background-color: rgba(164, 165, 163, 0.473);
+     backdrop-filter: blur(2px);
      transition: .5s opacity linear;
 }
 .show-modalOn {

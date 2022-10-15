@@ -1,85 +1,117 @@
-.nav-bar * {
-     // border: 1px solid red;
-}
+@use "../../Sass-Library/abstracts/" as *;
+
+
 
 .nav-bar {
-     background-color: rgb(255, 253, 251);
+     background-color: rgba(37, 37, 37, 0.911);
+     backdrop-filter: blur(60px);
+     background-image: url(../grain.jpg);  
+     background-size: contain;
+     position: relative;
+     // @include reveal(red);
 }
 
 .nav-top {
-     height: 30%;
+     height: 20%;
      display: grid;
-     place-items: center;
+     
+     padding: 0rem 0 0 1.5rem;
+     // margin-bottom: 2rem;
 }
 
 .nav-logo-container {
      display: flex;
      align-items: center;
-     height: 5rem;
+     padding-top: 2rem;
+     height: 3rem;
+
+     & img {
+          height: 100%;
+          cursor: pointer;
+     }
+
+     & p {
+          font-size: 1.8rem;
+          margin-left: .4rem;
+          // font-weight: bold;
+          font-family: "Poppins-B";
+          color: white;
+     }
 }
 
-.nav-logo-container img {
-     height: 100%;
-     cursor: pointer;
-}
-
-.nav-logo-container p {
-     font-size: 2rem;
-     font-weight: 500;
-     margin-left: .4rem;
-     color: rgb(172, 172, 172);
-}
 
 .nav-option{
      display: flex;
-     border-radius: .4rem;
+     font-size: 1rem;
+     font-weight: 100;
+     // border-radius: .4rem;
      align-items: center;
-     margin-left: 2.5rem;
-     padding-left: 1rem;
-     margin-bottom: 1.8rem;
-     padding: .7rem 0 .7rem 1rem  ;
      position: relative;
-     width: 85%;
-     transition: 1s all ease;
+     width: 100%;
+     height: 3rem;
+     margin: 0 0 1.2rem 0 ;
+     padding: 0 0 0 1.3rem;
+     transition: background .3s  ease;
+     cursor: pointer;
+
+     & i {
+          font-size: 1.4rem;
+          font-weight: 100;
+          color: rgb(209, 209, 209);
+          cursor: pointer;
+          margin-right: 1rem;
+     }
+
+     & h3 {
+          font-size: 1.1rem;
+          font-weight: 100;
+          cursor: pointer;
+     }
+
+     & span {
+          position: absolute;
+          width: 2.2rem;
+          height: 2.2rem;
+          right: 5%;
+          top: 50%;
+          transform: translateY(-50%);
+          display: grid;
+          place-items: center;
+          border-radius: .5rem;
+     }
+
+     &:hover{
+          background-color: rgba(245, 245, 245, 0.103);
+     }
+     &:active {
+          background-color: transparent;
+     }
+}
+
+.log-out {
+     position: absolute;
+     bottom: 0;
 }
 
 .inactive {
-     color: rgb(172, 172, 172);
+     color: white;
 }
 
 .active {
-     background-color: rgb(226, 226, 222);
-     color: rgb(136, 128, 128); 
-}
-.nav-option i {
-     font-size: 2rem;
-     cursor: pointer;
-     margin-right: 1rem;
+     // background-color: rgb(226, 226, 222);
+     color: rgb(136, 128, 128);
+     color: white;
 }
 
-.nav-option h3 {
-     // font-size: 1.1rem;
-     cursor: pointer;
-}
-
-.nav-option span {
-     position: absolute;
-     width: 2.2rem;
-     height: 2.2rem;
-     right: 5%;
-     top: 50%;
-     transform: translateY(-50%);
-     display: grid;
-     place-items: center;
-     border-radius: .5rem;
-}
 
 .nav-option .order-no {
-     background-color: rgb(248, 242, 242);
+     // background-color: rgb(248, 242, 242);
      color: rgb(104, 104, 104);
+     color: white;
 }
 
 .nav-option .cart-no {
-     background-color: rgb(248, 242, 242);
+     // background-color: rgb(248, 242, 242);
      color: rgb(104, 104, 104);
+     color: white;
 }

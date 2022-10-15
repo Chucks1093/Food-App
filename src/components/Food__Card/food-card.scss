@@ -1,95 +1,213 @@
 @use  "../../Sass-Library/abstracts" as *;
 
+.product-card {
+     // padding:  .5rem 0 0 0;
+     height: 12rem;
+     min-width: 6rem + 9rem;
+     border-radius: 1rem;
+     // background:  rgb(122, 76, 48);
 
-.menu {
-     width: 16rem;
-     margin: 0 auto;
-     border-radius: .7rem;
-     box-shadow: 0 0px 10px rgba(36, 35, 35, 0.062);
-     padding-top: 1rem;
-     padding: 0 .7rem 0;
-     border: none;
-     background-color: rgb(252, 247, 249);
-     @include reveal(red);
-}
+     // width: 14rem;
 
-.menu-img-container {
-     position: relative;
+     & .img-container {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          transform: translate(0% , -50%);
 
-     .menu-img {
-          @include roundImg(6rem);
-          margin: 0 auto;
-          object-position: center 70%;
-          box-shadow: 0 10px 20px rgba(36, 35, 35, 0.493);
-     
+          & .food-img {
+               @include roundImg(9rem);
+               transform: rotate(0deg); 
+          }
      }
-     .menu-image-loader {
-          transition: 4s opacity linear;
-          background-color: rgb(182, 100, 114);
-          position: absolute;
-          @include roundImg(6rem);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          opacity: 1;
-          left: 50%;
-          transform: translateX(-50%);
-     
+
+     & .card-details {
+          text-align: center;
+          @include gridCenter;
+
+          & h2 {
+               font-size: 1rem;
+          }
+
+          & > p {
+               width: 75%;
+               // margin-bottom: 2rem;
+          }
+
+          & .card-values{
+               position: relative;
+               bottom: -7%;
+               // margin-top: 1rem;
+
+               & .card-price {
+                    background-color: #0a5c55;
+                    color: white;
+                    width: 100%;
+                    height: 2rem;
+                    border-radius: .4rem;
+                    font-size: .9rem;
+                    font-weight: 500;
+                    grid-column: 8/12;
+               }
+          }
      }
-}
-
-
-
-
-.menu-name {
-     text-align: center;
-     margin-top: 1.6rem;
-     color: #01645e;
-     font-size: 1.2rem;
-}
-
-.menu .menu-info{
-     font-size: .8rem;
-     font-weight: 400;
-     text-align: center;
-     padding: 0 1rem;
-     margin-top: 1.3rem;
-     color: #8d8a8a;
 
 }
 
-
-.menu-value {
+.slant {
      display: flex;
-     justify-content: space-between;
      align-items: center;
-     padding: 0 1rem;
-     margin-top: 1.5rem;
-     font-size: 1.1rem;
-     font-weight: bold;
-     margin-bottom: 1.8rem;
+     width: 1rem;
+     height: 10rem;
+     border-radius: 1rem;
+     padding: 0 .5rem;
+     // @include reveal(red);
+     box-sizing: content-box;
 
-     .menu-price {
-          color: #01645e;
-          font-size: .8rem;
+     & .img-container {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          transform: translate(0);
+
+          & .food-img {
+               transform: rotate(0deg);
+               @include roundImg(8rem);
+               box-shadow: 5px 9px 16px rgba(0, 0, 0, 0.897);
+          }
      }
 
-     .menu-cart-btn {
-          background-color: transparent;
-          border: none;
-          font-size: .8rem;
-          font-weight: 500;
-          background-color: #02554f;
-          height: 2rem;
-          // @include gridCenter;
-          width: 6rem;
-          color:rgb(255, 255, 255);
-          cursor: pointer;
-          border-radius: .2rem;
+     & .card-details {
+          position: relative;
+          bottom: 0;
+          text-align: center;
+          border-radius: 0;
+          height: 80%;
+
+          & h2 {
+               font-size: 1.1rem;
+          }
+
+          & p {
+               position: absolute;
+               bottom: 50%;
+               transform: translateY(50%);
+          }
+
+          & .card-values {
+               position: absolute;
+               bottom: 0;
+
+               & .card-star {
+                    grid-column: 1/3;
+               }
+
+               & .star-value {
+                    grid-column: 2/5;
+               }
+
+               & .card-price {
+                    grid-column: 8/12;
+                    // background-color: rgb(80, 78, 75);
+                    // width: 110%;
+                    // height: 2rem;
+                    // border-radius: .4rem;
+                    // font-size: .7rem;
+               }
+          }
      }
 }
 
 
-.menu-cart-btn:hover {
-     background-color: #01756e;
-}
+// .menu {
+//      width: 16rem;
+//      margin: 0 auto;
+//      border-radius: .7rem;
+//      box-shadow: 0 0px 10px rgba(36, 35, 35, 0.062);
+//      padding-top: 1rem;
+//      padding: 0 .7rem 0;
+//      border: none;
+//      background-color: rgb(252, 247, 249);
+//      @include reveal(red);
+// }
+
+// .menu-img-container {
+//      position: relative;
+
+//      .menu-img {
+//           @include roundImg(6rem);
+//           margin: 0 auto;
+//           object-position: center 70%;
+//           box-shadow: 0 10px 20px rgba(36, 35, 35, 0.493);
+     
+//      }
+//      .menu-image-loader {
+//           transition: 4s opacity linear;
+//           background-color: rgb(182, 100, 114);
+//           position: absolute;
+//           @include roundImg(6rem);
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           opacity: 1;
+//           left: 50%;
+//           transform: translateX(-50%);
+     
+//      }
+// }
+
+
+
+
+// .menu-name {
+//      text-align: center;
+//      margin-top: 1.6rem;
+//      color: #01645e;
+//      font-size: 1.2rem;
+// }
+
+// .menu .menu-info{
+//      font-size: .8rem;
+//      font-weight: 400;
+//      text-align: center;
+//      padding: 0 1rem;
+//      margin-top: 1.3rem;
+//      color: #8d8a8a;
+
+// }
+
+
+// .menu-value {
+//      display: flex;
+//      justify-content: space-between;
+//      align-items: center;
+//      padding: 0 1rem;
+//      margin-top: 1.5rem;
+//      font-size: 1.1rem;
+//      font-weight: bold;
+//      margin-bottom: 1.8rem;
+
+//      .menu-price {
+//           color: #01645e;
+//           font-size: .8rem;
+//      }
+
+//      .menu-cart-btn {
+//           background-color: transparent;
+//           border: none;
+//           font-size: .8rem;
+//           font-weight: 500;
+//           background-color: #02554f;
+//           height: 2rem;
+//           // @include gridCenter;
+//           width: 6rem;
+//           color:rgb(255, 255, 255);
+//           cursor: pointer;
+//           border-radius: .2rem;
+//      }
+// }
+
+
+// .menu-cart-btn:hover {
+//      background-color: #01756e;
+// }

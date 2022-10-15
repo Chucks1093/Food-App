@@ -57,6 +57,10 @@ function Products(props) {
                               <Card  
                                    key={i} 
                                    handleClick={changeModalDetails} 
+                                   word="Stir fry pizza til because of sasan and become fry"
+                                   starValue="4.3" 
+                                   cardPrice="410"
+                                   name="Stir fry pasta"
                                    image={item.img} 
                                    price={item.price}
                               />

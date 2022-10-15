@@ -1,23 +1,13 @@
-@mixin screen($size) {
-     @media screen and (max-width : $size) {
-          @content;
-     }
-}
-
-@mixin gridCenter {
-     display: grid;
-     place-items: center;
-}
-
-
+@use "../../Sass-Library/abstracts/" as *;
 
 $foodImg : 14rem;
 
 .card {
      position: relative;
-     $bgBr : rgb(184, 113, 73);
+     $bgBr : rgb(194, 126, 87);
      $bgBl : rgba(29, 27, 25, 0.836);
      background: conic-gradient(transparent 25%, $bgBr 0% 50%, transparent 0% 75%, $bgBl 0%) 0/ 4em 4em, repeating-linear-gradient(45deg, $bgBl  0 2.83px, $bgBr 0 5.66px);
+     // background-color: white;
      border-radius: 2.5rem;
      height: $foodImg;
      min-width: $foodImg + 5rem;
@@ -41,7 +31,7 @@ $foodImg : 14rem;
           object-fit: cover;
           margin: 0 auto;
           border-radius: 50%;
-          transform: rotate(100deg);
+          transform: rotate(100deg);    
           box-shadow: 5px 0px 10px 7px rgba(19, 17, 17, 0.562);
      }
 
@@ -53,6 +43,7 @@ $foodImg : 14rem;
           opacity: 1;
           border-radius: 50%;
           display: grid;
+          display: none;
           place-items: center;
           top: 50%;
           left: 50%;
@@ -68,6 +59,7 @@ $foodImg : 14rem;
      position: absolute;
      width: 100%;
      padding: 0 0 .3rem;
+     text-align: center;
      // height: 45%;
      bottom: 5%;
 
@@ -80,16 +72,17 @@ $foodImg : 14rem;
      & > p {
           margin: .6rem 0 .2rem;
           font-family: "Poppins" ;
-          
-     }
-
-     & p {
-          font-size: .6rem;
+          font-size: .75rem;
           color: rgb(218, 206, 206);
      }
 
+     
      & .card-values {
-
+          
+          & p {
+               font-size: .6rem;
+               color: rgb(218, 206, 206);
+          }
           
           display: grid;
           grid-template-columns: repeat(12, 1fr);

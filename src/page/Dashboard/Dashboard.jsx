@@ -21,6 +21,11 @@ function Dashboard() {
      } 
      return(
           <div className="dashboard">
+               {/* <header>
+                    <img src="logo-blue.svg" alt="" />
+                    <p className='greetings'>  Good Morning to you ! <span>What delicious meal are you craving for today?</span></p>
+                    <img className='user' src="p-1.jpg" alt="" ></img>
+               </header> */}
                <Nav 
                     elementName={isModalActive}
                     handleState={(e)=>setModalState(e)}
